@@ -156,89 +156,65 @@ File: /index.html
     </header>
 
     <main id="main">
+    <!-- Replace ONLY the Highlights content inside: <section id="blog" ...> -->
       <section class="section container" id="blog" aria-label="Highlights">
-        <div class="section-head">
-          <h2 data-i18n="sections.highlights">Highlights</h2>
-          <p class="muted" data-i18n="sections.highlightsSub">
-            Klicken Sie nur das an, was Sie wirklich interessiert — editorial, klar, schnell.
-          </p>
-        </div>
-
-        <div class="cards">
-          <article class="card" id="shows">
-            <a class="card__media" href="#shows">
-              <img src="assets/card-collections.jpg" alt="" loading="lazy" width="1200" height="800" />
+        <div class="highlights-collage">
+          <!-- Top / wide -->
+          <article class="hc-item hc-item--top">
+            <a class="hc-media" href="#shows">
+              <img src="assets/card-collections.jpg" alt="" loading="lazy" width="1600" height="900" />
             </a>
-            <div class="card__body">
-              <div class="meta">
-                <span class="tag" data-i18n="cards.shows.tag">Shows</span>
-                <span class="dot">•</span>
-                <span class="meta__text" data-i18n="cards.shows.meta">Runways & Events</span>
-              </div>
-              <h3 class="card__title" data-i18n="cards.shows.title">Shows</h3>
-              <p class="card__text" data-i18n="cards.shows.text">
+            <div class="hc-caption hc-caption--left">
+              <div class="hc-eyebrow">SHOW</div>
+              <h3 class="hc-title">Shows</h3>
+              <p class="hc-text">
                 Highlights, Termine und kuratierte Präsentationen — modern, klar, schnell zugänglich.
               </p>
-              <a class="link" href="#shows" data-i18n="cards.open">Open</a>
+              <a class="hc-link" href="#shows">Öffnen</a>
             </div>
           </article>
 
-          <article class="card" id="sponsoring">
-            <a class="card__media" href="#sponsoring">
-              <img src="assets/card-programs.jpg" alt="" loading="lazy" width="1200" height="800" />
+          <!-- Left -->
+          <article class="hc-item hc-item--left">
+            <a class="hc-media" href="#shop">
+              <img src="assets/card-shop.jpg" alt="" loading="lazy" width="1200" height="1500" />
             </a>
-            <div class="card__body">
-              <div class="meta">
-                <span class="tag" data-i18n="cards.sponsoring.tag">Sponsoring</span>
-                <span class="dot">•</span>
-                <span class="meta__text" data-i18n="cards.sponsoring.meta">Partnerschaften</span>
-              </div>
-              <h3 class="card__title" data-i18n="cards.sponsoring.title">Sponsoring</h3>
-              <p class="card__text" data-i18n="cards.sponsoring.text">
-                Sponsoren, Förderer:innen und Kooperationen — transparent, hochwertig, professionell.
-              </p>
-              <a class="link" href="#sponsoring" data-i18n="cards.open">Open</a>
+            <div class="hc-caption hc-caption--bottom">
+              <div class="hc-eyebrow">SHOP</div>
+              <h3 class="hc-title">Shop</h3>
+              <p class="hc-text">Prints, Kataloge, Editionen — kuratiert, hochwertig.</p>
+              <a class="hc-link" href="#shop">Öffnen</a>
             </div>
           </article>
 
-          <article class="card" id="shop">
-            <a class="card__media" href="#shop">
-              <img src="assets/card-shop.jpg" alt="" loading="lazy" width="1200" height="800" />
+          <!-- Middle -->
+          <article class="hc-item hc-item--mid">
+            <a class="hc-media" href="#sponsoring">
+              <img src="assets/card-programs.jpg" alt="" loading="lazy" width="1200" height="1500" />
             </a>
-            <div class="card__body">
-              <div class="meta">
-                <span class="tag" data-i18n="cards.shop.tag">Shop</span>
-                <span class="dot">•</span>
-                <span class="meta__text" data-i18n="cards.shop.meta">Empfohlene Produkte</span>
-              </div>
-              <h3 class="card__title" data-i18n="cards.shop.title">Online-Shop</h3>
-              <p class="card__text" data-i18n="cards.shop.text">
-                Prints, Kataloge, Editionen — kuratiert, hochwertig, schnell erreichbar.
-              </p>
-              <a class="link" href="#shop" data-i18n="cards.open">Open</a>
+            <div class="hc-caption hc-caption--bottom">
+              <div class="hc-eyebrow">SPONSORING</div>
+              <h3 class="hc-title">Sponsoring</h3>
+              <p class="hc-text">Partner:innen, Förderungen und Kooperationen — professionell.</p>
+              <a class="hc-link" href="#sponsoring">Öffnen</a>
             </div>
           </article>
 
-          <article class="card" id="kontakt">
-            <a class="card__media" href="#kontakt">
-              <img src="assets/card-support.jpg" alt="" loading="lazy" width="1200" height="800" />
+          <!-- Right / big -->
+          <article class="hc-item hc-item--right">
+            <a class="hc-media" href="#kontakt">
+              <img src="assets/card-support.jpg" alt="" loading="lazy" width="1400" height="1100" />
             </a>
-            <div class="card__body">
-              <div class="meta">
-                <span class="tag" data-i18n="cards.contact.tag">Kontakt</span>
-                <span class="dot">•</span>
-                <span class="meta__text" data-i18n="cards.contact.meta">Anfragen & Presse</span>
-              </div>
-              <h3 class="card__title" data-i18n="cards.contact.title">Kontakt</h3>
-              <p class="card__text" data-i18n="cards.contact.text">
-                Kooperationen, Sponsoring und Presse — schnelle Wege, klar strukturiert.
-              </p>
-              <a class="link" href="#kontakt" data-i18n="cards.open">Open</a>
+            <div class="hc-caption hc-caption--right">
+              <div class="hc-eyebrow">CONTACT</div>
+              <h3 class="hc-title">Kontakt</h3>
+              <p class="hc-text">Kooperationen, Sponsoring & Presse — schnelle Wege, klar strukturiert.</p>
+              <a class="hc-link" href="#kontakt">Öffnen</a>
             </div>
           </article>
         </div>
       </section>
-
+      
       <section class="section container" id="about" aria-label="About">
         <div class="split">
           <div>
