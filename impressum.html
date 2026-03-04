@@ -1,0 +1,90 @@
+<!--
+File: /impressum.html
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>Impressum — Voices of Creation e.V.</title>
+    <meta name="description" content="Impressum — Voices of Creation e.V." />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="simple-header">
+      <div class="container simple-header__row">
+        <a class="brand brand--small" href="./" aria-label="Home">
+          <img src="assets/logo.png" alt="Voices of Creation Logo" width="180" height="58" />
+        </a>
+        <nav class="simple-nav">
+          <a href="./">Home</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="ausstellungen.html">Ausstellungen</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container legal">
+      <h1>Impressum</h1>
+      <p class="muted">
+        Platzhalter — bitte mit den offiziellen Vereinsdaten befüllen (Adresse, Vertretung, Register, Kontakt).
+      </p>
+
+      <section class="legal__box">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          Voices of Creation e.V.<br />
+          Straße Hausnummer<br />
+          PLZ Ort<br />
+          Deutschland
+        </p>
+
+        <h2>Vertreten durch</h2>
+        <p>Vorstand: [Name], [Name]</p>
+
+        <h2>Kontakt</h2>
+        <p>
+          E-Mail: <a href="mailto:info@vofc.art">info@vofc.art</a><br />
+          Website: <a href="https://www.vofc.art/" rel="noreferrer">www.vofc.art</a>
+        </p>
+
+        <h2>Registereintrag</h2>
+        <p>
+          Vereinsregister: [Registergericht]<br />
+          Registernummer: [Nummer]
+        </p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>Platzhaltertext. (Empfehlung: rechtlich geprüften Text einsetzen.)</p>
+
+        <h2>Haftung für Links</h2>
+        <p>Platzhaltertext. (Empfehlung: rechtlich geprüften Text einsetzen.)</p>
+
+        <h2>Urheberrecht</h2>
+        <p>Platzhaltertext. (Empfehlung: rechtlich geprüften Text einsetzen.)</p>
+      </section>
+
+      <p><a class="link" href="./">← Zurück zur Startseite</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container subfooter">
+        <div class="subfooter__left">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="subfooter__right">
+          <span class="muted">© <span id="year"></span> Voices of Creation e.V.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>

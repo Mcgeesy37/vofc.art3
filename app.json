@@ -1,0 +1,16 @@
+/*
+File: /app.json
+*/
+{
+  "name": "Voices of Creation e.V.",
+  "short_name": "VoC",
+  "description": "Voices of Creation e.V. — Art • Culture • Creation.",
+  "start_url": "/?lang=de",
+  "display": "standalone",
+  "background_color": "#f4f1ec",
+  "theme_color": "#0b0b0c",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

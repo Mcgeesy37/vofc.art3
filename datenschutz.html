@@ -1,0 +1,93 @@
+<!--
+File: /datenschutz.html
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>Datenschutz — Voices of Creation e.V.</title>
+    <meta name="description" content="Datenschutzerklärung — Voices of Creation e.V." />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="simple-header">
+      <div class="container simple-header__row">
+        <a class="brand brand--small" href="./" aria-label="Home">
+          <img src="assets/logo.png" alt="Voices of Creation Logo" width="180" height="58" />
+        </a>
+        <nav class="simple-nav">
+          <a href="./">Home</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="ausstellungen.html">Ausstellungen</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container legal">
+      <h1>Datenschutzerklärung</h1>
+      <p class="muted">
+        Platzhalter — DSGVO-konform finalisieren (Hosting, Logs, Cookies, Analytics, Newsletter-Tool, Kontakt).
+        Sag mir kurz, ob du Analytics/Newsletter wirklich nutzt (und welcher Anbieter), dann schreibe ich dir die passende finale Version.
+      </p>
+
+      <section class="legal__box">
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Voices of Creation e.V.<br />
+          Straße Hausnummer<br />
+          PLZ Ort<br />
+          E-Mail: <a href="mailto:info@vofc.art">info@vofc.art</a>
+        </p>
+
+        <h2>2. Hosting</h2>
+        <p>
+          Diese Website wird als statische Website ausgeliefert. (Hosting-Anbieter ergänzen, z.B. GitHub Pages.)
+        </p>
+
+        <h2>3. Server-Logfiles</h2>
+        <p>
+          Beim Aufruf werden technische Daten verarbeitet (z.B. IP-Adresse, Datum/Uhrzeit, User-Agent).
+          (Details je nach Hosting ergänzen.)
+        </p>
+
+        <h2>4. Kontaktaufnahme</h2>
+        <p>
+          Bei Kontakt per E-Mail werden die übermittelten Daten zur Bearbeitung der Anfrage gespeichert.
+        </p>
+
+        <h2>5. Cookies / Einwilligung</h2>
+        <p>
+          Platzhalter: Wenn Tracking/Third-Party genutzt wird, ist ein Consent-Tool notwendig.
+        </p>
+
+        <h2>6. Rechte der betroffenen Personen</h2>
+        <p>
+          Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch, Beschwerde.
+        </p>
+      </section>
+
+      <p><a class="link" href="./">← Zurück zur Startseite</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container subfooter">
+        <div class="subfooter__left">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="subfooter__right">
+          <span class="muted">© <span id="year"></span> Voices of Creation e.V.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>

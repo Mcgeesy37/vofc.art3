@@ -1,0 +1,601 @@
+<!--
+File: /index.html
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>Voices of Creation e.V. — Official Website</title>
+    <meta
+      name="description"
+      content="Voices of Creation e.V. — Ausstellungen, Shows, Sponsoring, Shop, Kontakt."
+    />
+
+    <meta property="og:title" content="Voices of Creation e.V." />
+    <meta property="og:description" content="Ausstellungen, Shows, Sponsoring, Shop, Kontakt." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.vofc.art/" />
+    <meta property="og:image" content="assets/og.jpg" />
+
+    <link rel="manifest" href="app.json" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(location.search);
+        const fromQuery = params.get("lang");
+        const fromStorage = localStorage.getItem("vofc_lang");
+        const lang = (fromQuery || fromStorage || "de").toLowerCase();
+
+        if (lang !== "de" && lang !== "en") return;
+        localStorage.setItem("vofc_lang", lang);
+        document.documentElement.lang = lang;
+        window.__VOFC_LANG__ = lang;
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="./" aria-label="Voices of Creation e.V. Home">
+          <img
+            class="brand__mark"
+            src="assets/logo.png"
+            alt="Voices of Creation Logo"
+            width="220"
+            height="72"
+            loading="eager"
+          />
+        </a>
+
+        <nav class="header-nav" aria-label="Primary">
+          <!-- Exhibitions opens its own page -->
+          <a
+            class="nav-link nav-link--comingsoon"
+            href="ausstellungen.html"
+            data-i18n="nav.exhibitions"
+            data-comingsoon="Coming soon"
+            >Ausstellungen</a
+          >
+          <a class="nav-link" href="#shows" data-i18n="nav.shows">Shows</a>
+          <a class="nav-link" href="#sponsoring" data-i18n="nav.sponsoring">Sponsoring</a>
+          <a class="nav-link" href="#shop" data-i18n="nav.shop">Shop</a>
+          <a class="nav-link" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+
+        <div class="header-actions">
+          <nav class="utility" aria-label="Utility">
+            <a class="utility__link" href="#shop" data-i18n="nav.shopTop">Online-Shop</a>
+            <a class="utility__link" href="#tickets" data-i18n="nav.ticketsTop">Get Tickets</a>
+          </nav>
+
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn" type="button" data-lang="de" aria-pressed="true">DE</button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="container hero">
+        <div class="hero__left">
+          <div class="hero-media">
+            <img
+              src="assets/hero.jpg"
+              alt="Artwork / Exhibition impression"
+              width="1400"
+              height="900"
+              loading="eager"
+            />
+            <div class="hero-media__veil" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <p class="kicker" data-i18n="hero.kicker">Voices of Creation e.V.</p>
+          <h1 class="title" data-i18n="hero.title">A platform for contemporary art, culture & creation.</h1>
+          <p class="lead" data-i18n="hero.lead">
+            Entdecken Sie Ausstellungen, Shows und Partnerschaften — und kontaktieren Sie uns direkt.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#blog" data-i18n="hero.ctaPrimary">Explore</a>
+            <a class="btn btn--ghost" href="#kontakt" data-i18n="hero.ctaSecondary">Kontakt</a>
+          </div>
+
+          <!-- mid menu: edgy/collage -->
+          <nav class="mid-menu" aria-label="Quick categories">
+            <a class="mid-item mid-item--a comingsoon" href="ausstellungen.html">
+              <span class="mid-item__kicker" data-i18n="mid.exhibitions.kicker">Kategorie</span>
+              <span class="mid-item__label" data-i18n="nav.exhibitions">Ausstellungen</span>
+              <span class="mid-item__badge" data-i18n="mid.comingSoon">Coming soon</span>
+            </a>
+
+            <a class="mid-item mid-item--b" href="#shows">
+              <span class="mid-item__kicker" data-i18n="mid.shows.kicker">Kategorie</span>
+              <span class="mid-item__label" data-i18n="nav.shows">Shows</span>
+            </a>
+
+            <a class="mid-item mid-item--c" href="#sponsoring">
+              <span class="mid-item__kicker" data-i18n="mid.sponsoring.kicker">Kategorie</span>
+              <span class="mid-item__label" data-i18n="nav.sponsoring">Sponsoring</span>
+            </a>
+
+            <a class="mid-item mid-item--d" href="#shop">
+              <span class="mid-item__kicker" data-i18n="mid.shop.kicker">Kategorie</span>
+              <span class="mid-item__label" data-i18n="nav.shop">Shop</span>
+            </a>
+
+            <a class="mid-item mid-item--e" href="#kontakt">
+              <span class="mid-item__kicker" data-i18n="mid.contact.kicker">Kategorie</span>
+              <span class="mid-item__label" data-i18n="nav.contact">Kontakt</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="container announcement" id="tickets">
+        <div class="announcement__box">
+          <strong data-i18n="announce.title">Hinweis</strong>
+          <span data-i18n="announce.text">
+            Diese Seite befindet sich aktuell im Aufbau. Startseite ist live — weitere Inhalte folgen.
+          </span>
+          <a class="announcement__link" href="#kontakt" data-i18n="announce.link">Kontakt</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section container" id="blog" aria-label="Highlights">
+        <div class="section-head">
+          <h2 data-i18n="sections.highlights">Highlights</h2>
+          <p class="muted" data-i18n="sections.highlightsSub">
+            Klicken Sie nur das an, was Sie wirklich interessiert — editorial, klar, schnell.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card" id="shows">
+            <a class="card__media" href="#shows">
+              <img src="assets/card-collections.jpg" alt="" loading="lazy" width="1200" height="800" />
+            </a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.shows.tag">Shows</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shows.meta">Runways & Events</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.shows.title">Shows</h3>
+              <p class="card__text" data-i18n="cards.shows.text">
+                Highlights, Termine und kuratierte Präsentationen — modern, klar, schnell zugänglich.
+              </p>
+              <a class="link" href="#shows" data-i18n="cards.open">Open</a>
+            </div>
+          </article>
+
+          <article class="card" id="sponsoring">
+            <a class="card__media" href="#sponsoring">
+              <img src="assets/card-programs.jpg" alt="" loading="lazy" width="1200" height="800" />
+            </a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.sponsoring.tag">Sponsoring</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.sponsoring.meta">Partnerschaften</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.sponsoring.title">Sponsoring</h3>
+              <p class="card__text" data-i18n="cards.sponsoring.text">
+                Sponsoren, Förderer:innen und Kooperationen — transparent, hochwertig, professionell.
+              </p>
+              <a class="link" href="#sponsoring" data-i18n="cards.open">Open</a>
+            </div>
+          </article>
+
+          <article class="card" id="shop">
+            <a class="card__media" href="#shop">
+              <img src="assets/card-shop.jpg" alt="" loading="lazy" width="1200" height="800" />
+            </a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.shop.tag">Shop</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shop.meta">Empfohlene Produkte</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.shop.title">Online-Shop</h3>
+              <p class="card__text" data-i18n="cards.shop.text">
+                Prints, Kataloge, Editionen — kuratiert, hochwertig, schnell erreichbar.
+              </p>
+              <a class="link" href="#shop" data-i18n="cards.open">Open</a>
+            </div>
+          </article>
+
+          <article class="card" id="kontakt">
+            <a class="card__media" href="#kontakt">
+              <img src="assets/card-support.jpg" alt="" loading="lazy" width="1200" height="800" />
+            </a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.contact.tag">Kontakt</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.contact.meta">Anfragen & Presse</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.contact.title">Kontakt</h3>
+              <p class="card__text" data-i18n="cards.contact.text">
+                Kooperationen, Sponsoring und Presse — schnelle Wege, klar strukturiert.
+              </p>
+              <a class="link" href="#kontakt" data-i18n="cards.open">Open</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="about" aria-label="About">
+        <div class="split">
+          <div>
+            <h2 data-i18n="about.title">About Voices of Creation e.V.</h2>
+            <p class="muted" data-i18n="about.text">
+              Wir verbinden Künstler:innen, Förder:innen und Publikum — mit Projekten, Ausstellungen und digitalen Formaten.
+            </p>
+            <div class="pill-row">
+              <span class="pill" data-i18n="about.pill1">Kunst & Kultur</span>
+              <span class="pill" data-i18n="about.pill2">Shows</span>
+              <span class="pill" data-i18n="about.pill3">Sponsoring</span>
+            </div>
+          </div>
+
+          <div class="callout" id="kontakt-box">
+            <h3 data-i18n="contact.title">Kontakt</h3>
+            <p class="muted" data-i18n="contact.text">Für Kooperationen, Sponsoring und Presseanfragen.</p>
+            <ul class="list">
+              <li><span data-i18n="contact.email">E-Mail:</span> <a href="mailto:info@vofc.art">info@vofc.art</a></li>
+              <li><span data-i18n="contact.web">Web:</span> <a href="https://www.vofc.art/" rel="noreferrer">www.vofc.art</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid" aria-label="Footer navigation">
+        <div class="footer-brand">
+          <div class="footer-brand__top">
+            <strong>Voices of Creation e.V.</strong>
+            <span class="muted" data-i18n="footer.tagline">Art • Culture • Creation</span>
+          </div>
+
+          <div class="social">
+            <!-- placeholders -->
+            <a href="https://instagram.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer" aria-label="Instagram (placeholder)">IG</a>
+            <a href="https://tiktok.com/@PLACEHOLDER" target="_blank" rel="noopener noreferrer" aria-label="TikTok (placeholder)">TT</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1">Ausstellungen</h4>
+          <a href="ausstellungen.html" data-i18n="footer.exhibitions">Ausstellungen</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2">Shows</h4>
+          <a href="#shows" data-i18n="footer.showsHighlights">Highlights</a>
+          <a href="#shows" data-i18n="footer.showsSchedule">Zeitplan</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col3">Sponsoring</h4>
+          <a href="#sponsoring" data-i18n="footer.partners">Partner</a>
+          <a href="#sponsoring" data-i18n="footer.funding">Förderung</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col4">Shop</h4>
+          <a href="#shop" data-i18n="footer.featured">Empfohlene Produkte</a>
+          <a href="#shop" data-i18n="footer.catalog">Ausstellungskataloge</a>
+          <a href="#shop" data-i18n="footer.editions">Editionen</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col5">Kontakt</h4>
+          <a href="#kontakt" data-i18n="footer.contact">Kontakt</a>
+          <a href="mailto:info@vofc.art" data-i18n="footer.email">E-Mail</a>
+        </div>
+      </div>
+
+      <div class="container subfooter" aria-label="Legal">
+        <div class="subfooter__left">
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+          <a href="#" data-i18n="legal.cookies">Cookie-Einstellungen</a>
+        </div>
+
+        <div class="subfooter__right">
+          <span class="muted" data-i18n="legal.copy">
+            © <span id="year"></span> Voices of Creation e.V. — Alle Rechte vorbehalten.
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="drawer" aria-hidden="true">
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <div class="drawer__top">
+          <strong>Menu</strong>
+          <button class="drawer__close" type="button" aria-label="Close menu">✕</button>
+        </div>
+        <nav class="drawer__nav" aria-label="Mobile">
+          <a class="nav-link nav-link--comingsoon" href="ausstellungen.html" data-comingsoon="Coming soon" data-i18n="nav.exhibitions">Ausstellungen</a>
+          <a href="#shows" data-i18n="nav.shows">Shows</a>
+          <a href="#sponsoring" data-i18n="nav.sponsoring">Sponsoring</a>
+          <a href="#shop" data-i18n="nav.shop">Shop</a>
+          <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+          <hr />
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+        </nav>
+      </div>
+      <div class="drawer__backdrop" tabindex="-1"></div>
+    </div>
+
+    <script>
+      const I18N = {
+        de: {
+          "nav.shopTop": "Online-Shop",
+          "nav.ticketsTop": "Get Tickets",
+
+          "nav.exhibitions": "Ausstellungen",
+          "nav.shows": "Shows",
+          "nav.sponsoring": "Sponsoring",
+          "nav.shop": "Shop",
+          "nav.contact": "Kontakt",
+
+          "hero.kicker": "Voices of Creation e.V.",
+          "hero.title": "Plattform für zeitgenössische Kunst, Kultur & Creation.",
+          "hero.lead": "Entdecken Sie Ausstellungen, Shows und Partnerschaften — und kontaktieren Sie uns direkt.",
+          "hero.ctaPrimary": "Entdecken",
+          "hero.ctaSecondary": "Kontakt",
+
+          "mid.comingSoon": "Coming soon",
+          "mid.exhibitions.kicker": "Kategorie",
+          "mid.shows.kicker": "Kategorie",
+          "mid.sponsoring.kicker": "Kategorie",
+          "mid.shop.kicker": "Kategorie",
+          "mid.contact.kicker": "Kategorie",
+
+          "announce.title": "Hinweis",
+          "announce.text": "Diese Seite befindet sich aktuell im Aufbau. Startseite ist live — weitere Inhalte folgen.",
+          "announce.link": "Kontakt",
+
+          "sections.highlights": "Highlights",
+          "sections.highlightsSub": "Klicken Sie nur das an, was Sie wirklich interessiert — editorial, klar, schnell.",
+
+          "cards.open": "Öffnen",
+
+          "cards.shows.tag": "Shows",
+          "cards.shows.meta": "Runways & Events",
+          "cards.shows.title": "Shows",
+          "cards.shows.text": "Highlights, Termine und kuratierte Präsentationen — modern, klar, schnell zugänglich.",
+
+          "cards.sponsoring.tag": "Sponsoring",
+          "cards.sponsoring.meta": "Partnerschaften",
+          "cards.sponsoring.title": "Sponsoring",
+          "cards.sponsoring.text": "Sponsoren, Förderer:innen und Kooperationen — transparent, hochwertig, professionell.",
+
+          "cards.shop.tag": "Shop",
+          "cards.shop.meta": "Empfohlene Produkte",
+          "cards.shop.title": "Online-Shop",
+          "cards.shop.text": "Prints, Kataloge, Editionen — kuratiert, hochwertig, schnell erreichbar.",
+
+          "cards.contact.tag": "Kontakt",
+          "cards.contact.meta": "Anfragen & Presse",
+          "cards.contact.title": "Kontakt",
+          "cards.contact.text": "Kooperationen, Sponsoring und Presse — schnelle Wege, klar strukturiert.",
+
+          "about.title": "About Voices of Creation e.V.",
+          "about.text": "Wir verbinden Künstler:innen, Förder:innen und Publikum — mit Projekten, Ausstellungen und digitalen Formaten.",
+          "about.pill1": "Kunst & Kultur",
+          "about.pill2": "Shows",
+          "about.pill3": "Sponsoring",
+
+          "contact.title": "Kontakt",
+          "contact.text": "Für Kooperationen, Sponsoring und Presseanfragen.",
+          "contact.email": "E-Mail:",
+          "contact.web": "Web:",
+
+          "footer.tagline": "Art • Culture • Creation",
+          "footer.col1": "Ausstellungen",
+          "footer.exhibitions": "Ausstellungen",
+          "footer.col2": "Shows",
+          "footer.showsHighlights": "Highlights",
+          "footer.showsSchedule": "Zeitplan",
+          "footer.col3": "Sponsoring",
+          "footer.partners": "Partner",
+          "footer.funding": "Förderung",
+          "footer.col4": "Shop",
+          "footer.featured": "Empfohlene Produkte",
+          "footer.catalog": "Ausstellungskataloge",
+          "footer.editions": "Editionen",
+          "footer.col5": "Kontakt",
+          "footer.contact": "Kontakt",
+          "footer.email": "E-Mail",
+
+          "legal.imprint": "Impressum",
+          "legal.privacy": "Datenschutz",
+          "legal.cookies": "Cookie-Einstellungen",
+          "legal.copy": "© {{year}} Voices of Creation e.V. — Alle Rechte vorbehalten.",
+        },
+
+        en: {
+          "nav.shopTop": "Online Shop",
+          "nav.ticketsTop": "Get Tickets",
+
+          "nav.exhibitions": "Exhibitions",
+          "nav.shows": "Shows",
+          "nav.sponsoring": "Sponsoring",
+          "nav.shop": "Shop",
+          "nav.contact": "Contact",
+
+          "hero.kicker": "Voices of Creation e.V.",
+          "hero.title": "A platform for contemporary art, culture & creation.",
+          "hero.lead": "Explore exhibitions, shows and partnerships — and contact us directly.",
+          "hero.ctaPrimary": "Explore",
+          "hero.ctaSecondary": "Contact",
+
+          "mid.comingSoon": "Coming soon",
+          "mid.exhibitions.kicker": "Category",
+          "mid.shows.kicker": "Category",
+          "mid.sponsoring.kicker": "Category",
+          "mid.shop.kicker": "Category",
+          "mid.contact.kicker": "Category",
+
+          "announce.title": "Note",
+          "announce.text": "This website is currently under construction. The homepage is live — more content will follow.",
+          "announce.link": "Contact",
+
+          "sections.highlights": "Highlights",
+          "sections.highlightsSub": "Click only what matters to you — editorial, clear, fast.",
+
+          "cards.open": "Open",
+
+          "cards.shows.tag": "Shows",
+          "cards.shows.meta": "Runways & Events",
+          "cards.shows.title": "Shows",
+          "cards.shows.text": "Highlights, dates and curated presentations — modern, clear, accessible.",
+
+          "cards.sponsoring.tag": "Sponsoring",
+          "cards.sponsoring.meta": "Partnerships",
+          "cards.sponsoring.title": "Sponsoring",
+          "cards.sponsoring.text": "Sponsors, supporters and collaborations — transparent and premium.",
+
+          "cards.shop.tag": "Shop",
+          "cards.shop.meta": "Featured",
+          "cards.shop.title": "Online Shop",
+          "cards.shop.text": "Prints, catalogs, editions — curated, premium, easy to reach.",
+
+          "cards.contact.tag": "Contact",
+          "cards.contact.meta": "Inquiries & Press",
+          "cards.contact.title": "Contact",
+          "cards.contact.text": "Collaborations, sponsoring and press — quick ways, clear structure.",
+
+          "about.title": "About Voices of Creation e.V.",
+          "about.text": "We connect artists, supporters and audiences — through projects, exhibitions and digital formats.",
+          "about.pill1": "Art & Culture",
+          "about.pill2": "Shows",
+          "about.pill3": "Sponsoring",
+
+          "contact.title": "Contact",
+          "contact.text": "For collaborations, sponsoring and press inquiries.",
+          "contact.email": "Email:",
+          "contact.web": "Web:",
+
+          "footer.tagline": "Art • Culture • Creation",
+          "footer.col1": "Exhibitions",
+          "footer.exhibitions": "Exhibitions",
+          "footer.col2": "Shows",
+          "footer.showsHighlights": "Highlights",
+          "footer.showsSchedule": "Schedule",
+          "footer.col3": "Sponsoring",
+          "footer.partners": "Partners",
+          "footer.funding": "Funding",
+          "footer.col4": "Shop",
+          "footer.featured": "Featured products",
+          "footer.catalog": "Exhibition catalogs",
+          "footer.editions": "Editions",
+          "footer.col5": "Contact",
+          "footer.contact": "Contact",
+          "footer.email": "Email",
+
+          "legal.imprint": "Imprint",
+          "legal.privacy": "Privacy",
+          "legal.cookies": "Cookie settings",
+          "legal.copy": "© {{year}} Voices of Creation e.V. — All rights reserved.",
+        },
+      };
+
+      function setLangButtons(lang) {
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang") === lang));
+        });
+      }
+
+      function applyI18n(lang) {
+        const dict = I18N[lang] || I18N.de;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          let value = dict[key];
+          if (!value) return;
+          if (key === "legal.copy") value = value.replace("{{year}}", String(new Date().getFullYear()));
+          el.textContent = value;
+        });
+        document.querySelectorAll("[data-comingsoon]").forEach((el) => {
+          el.setAttribute("data-comingsoon", dict["mid.comingSoon"] || "Coming soon");
+        });
+      }
+
+      function updateUrlLang(lang) {
+        const url = new URL(location.href);
+        url.searchParams.set("lang", lang);
+        history.replaceState({}, "", url.toString());
+      }
+
+      function initMenu() {
+        const burger = document.querySelector(".burger");
+        const drawer = document.querySelector(".drawer");
+        const backdrop = document.querySelector(".drawer__backdrop");
+        const closeBtn = document.querySelector(".drawer__close");
+
+        function open() {
+          drawer.classList.add("is-open");
+          drawer.setAttribute("aria-hidden", "false");
+          burger.setAttribute("aria-expanded", "true");
+          document.body.classList.add("no-scroll");
+        }
+        function close() {
+          drawer.classList.remove("is-open");
+          drawer.setAttribute("aria-hidden", "true");
+          burger.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("no-scroll");
+        }
+
+        burger.addEventListener("click", () => (drawer.classList.contains("is-open") ? close() : open()));
+        backdrop.addEventListener("click", close);
+        closeBtn.addEventListener("click", close);
+        drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
+        document.addEventListener("keydown", (e) => e.key === "Escape" && close());
+      }
+
+      function initLangSwitcher() {
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang");
+            localStorage.setItem("vofc_lang", lang);
+            document.documentElement.lang = lang;
+            setLangButtons(lang);
+            applyI18n(lang);
+            updateUrlLang(lang);
+          });
+        });
+      }
+
+      (function init() {
+        const lang = window.__VOFC_LANG__ || "de";
+        setLangButtons(lang);
+        applyI18n(lang);
+        updateUrlLang(lang);
+        const y = document.getElementById("year");
+        if (y) y.textContent = String(new Date().getFullYear());
+        initLangSwitcher();
+        initMenu();
+      })();
+    </script>
+  </body>
+</html>
