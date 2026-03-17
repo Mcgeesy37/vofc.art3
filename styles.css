@@ -885,3 +885,12 @@ html, body, button, a{
   background: transparent !important;
   outline: none !important;
 }
+
+/* Hard override: nothing inside icon button may cast a shadow */
+.utility .icon-btn *,
+#openSearch *{
+  filter: none !important;
+  -webkit-filter: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
