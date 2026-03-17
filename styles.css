@@ -720,3 +720,58 @@ p{margin:0}
     font-weight: 700;
   }
 }
+
+/* ===== Desktop tweaks (only) ===== */
+
+/* Lupe (icon-btn) ohne Schatten */
+.icon-btn{
+  box-shadow:none !important;
+  background: transparent !important;
+}
+.icon-btn svg{
+  filter:none !important;
+}
+
+/* Hero als Banner (Desktop) */
+.hero--banner{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 10px 20px 0 20px;
+}
+
+.hero-media--banner{
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  box-shadow: none;               /* optional: wenn du auch hier weniger Shadow willst */
+  border: 1px solid rgba(0,0,0,.08);
+  min-height: 320px;
+}
+
+/* Text links ausgerichtet + nicht "zentriert" */
+.hero-copy{
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+/* Desktop: Hero-Bild soll über volle Desktopbreite innerhalb Container gehen */
+@media (min-width: 860px){
+  .hero--banner{
+    padding: 10px 20px 0 20px; /* white side margin bleibt wegen container */
+  }
+  .hero-media--banner{
+    min-height: 420px;
+  }
+  .hero-copy{
+    max-width: 760px; /* schöner editorial Block */
+  }
+}
+
+/* Optional: falls du den hero-media shadow komplett entfernen willst */
+@media (min-width: 860px){
+  .hero-media{
+    box-shadow:none;
+  }
+}
