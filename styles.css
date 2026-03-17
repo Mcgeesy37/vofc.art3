@@ -775,3 +775,41 @@ p{margin:0}
     box-shadow:none;
   }
 }
+
+/* Search results */
+.search-results{
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.search-item{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.78);
+}
+
+.search-item__left{display:flex;flex-direction:column;gap:4px}
+.search-item__title{font-weight:700}
+.search-item__meta{font-size:13px;color:var(--muted)}
+.search-item__go{text-decoration:underline;text-underline-offset:4px;font-size:14px;white-space:nowrap}
+
+/* Remove iOS/Safari blue focus highlight on the loupe */
+.icon-btn{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon-btn:focus,
+.icon-btn:focus-visible{
+  outline: none !important;
+  box-shadow: none !important;
+}
