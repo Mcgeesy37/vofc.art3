@@ -813,3 +813,31 @@ p{margin:0}
   outline: none !important;
   box-shadow: none !important;
 }
+
+/* ===== LOUPE FIX (iOS/Safari) ===== */
+#openSearch{
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.icon-btn,
+.icon-btn *{
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.icon-btn{
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.icon-btn:focus,
+.icon-btn:focus-visible,
+.icon-btn:active{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.icon-btn svg{
+  filter: none !important;
+}
