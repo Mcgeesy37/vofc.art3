@@ -41,6 +41,24 @@ File: /index.html
 
   <body>
     <a class="skip" href="#main">Skip to content</a>
+    <!-- Utility bar: Newsletter – Search – Menu -->
+    <div class="utility">
+      <div class="container utility__inner">
+        <a class="utility__link" href="#newsletter">Newsletter</a>
+
+        <button class="icon-btn" type="button" id="openSearch" aria-label="Suche öffnen">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10.5 3a7.5 7.5 0 1 1 4.6 13.4l4.2 4.2-1.4 1.4-4.2-4.2A7.5 7.5 0 0 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn" type="button" id="openMenu" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 7h16v2H4V7Zm0 6h16v2H4v-2Zm0 6h16v2H4v-2Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <header class="site-header">
       <div class="container header-row">
@@ -71,17 +89,13 @@ File: /index.html
         </nav>
 
         <div class="header-actions">
-          <nav class="utility" aria-label="Utility">
-            <a class="utility__link" href="#shop" data-i18n="nav.shopTop">Online-Shop</a>
-            <a class="utility__link" href="#tickets" data-i18n="nav.ticketsTop">Get Tickets</a>
-          </nav>
 
           <div class="lang" role="group" aria-label="Language">
             <button class="lang__btn" type="button" data-lang="de" aria-pressed="true">DE</button>
             <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
           </div>
 
-          <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <button class="burger" type="button" id="openMenu" aria-label="Menü öffnen" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -156,65 +170,89 @@ File: /index.html
     </header>
 
     <main id="main">
-    <!-- Replace ONLY the Highlights content inside: <section id="blog" ...> -->
       <section class="section container" id="blog" aria-label="Highlights">
-        <div class="highlights-collage">
-          <!-- Top / wide -->
-          <article class="hc-item hc-item--top">
-            <a class="hc-media" href="#shows">
-              <img src="assets/card-collections.jpg" alt="" loading="lazy" width="1600" height="900" />
+        <div class="section-head">
+          <h2 data-i18n="sections.highlights">Highlights</h2>
+          <p class="muted" data-i18n="sections.highlightsSub">
+            Klicken Sie nur das an, was Sie wirklich interessiert — editorial, klar, schnell.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card" id="shows">
+            <a class="card__media" href="#shows">
+              <img src="assets/card-collections.jpg" alt="" loading="lazy" width="1200" height="800" />
             </a>
-            <div class="hc-caption hc-caption--left">
-              <div class="hc-eyebrow">SHOW</div>
-              <h3 class="hc-title">Shows</h3>
-              <p class="hc-text">
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.shows.tag">Shows</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shows.meta">Runways & Events</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.shows.title">Shows</h3>
+              <p class="card__text" data-i18n="cards.shows.text">
                 Highlights, Termine und kuratierte Präsentationen — modern, klar, schnell zugänglich.
               </p>
-              <a class="hc-link" href="#shows">Öffnen</a>
+              <a class="link" href="#shows" data-i18n="cards.open">Open</a>
             </div>
           </article>
 
-          <!-- Left -->
-          <article class="hc-item hc-item--left">
-            <a class="hc-media" href="#shop">
-              <img src="assets/card-shop.jpg" alt="" loading="lazy" width="1200" height="1500" />
+          <article class="card" id="sponsoring">
+            <a class="card__media" href="#sponsoring">
+              <img src="assets/card-programs.jpg" alt="" loading="lazy" width="1200" height="800" />
             </a>
-            <div class="hc-caption hc-caption--bottom">
-              <div class="hc-eyebrow">SHOP</div>
-              <h3 class="hc-title">Shop</h3>
-              <p class="hc-text">Prints, Kataloge, Editionen — kuratiert, hochwertig.</p>
-              <a class="hc-link" href="#shop">Öffnen</a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.sponsoring.tag">Sponsoring</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.sponsoring.meta">Partnerschaften</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.sponsoring.title">Sponsoring</h3>
+              <p class="card__text" data-i18n="cards.sponsoring.text">
+                Sponsoren, Förderer:innen und Kooperationen — transparent, hochwertig, professionell.
+              </p>
+              <a class="link" href="#sponsoring" data-i18n="cards.open">Open</a>
             </div>
           </article>
 
-          <!-- Middle -->
-          <article class="hc-item hc-item--mid">
-            <a class="hc-media" href="#sponsoring">
-              <img src="assets/card-programs.jpg" alt="" loading="lazy" width="1200" height="1500" />
+          <article class="card" id="shop">
+            <a class="card__media" href="#shop">
+              <img src="assets/card-shop.jpg" alt="" loading="lazy" width="1200" height="800" />
             </a>
-            <div class="hc-caption hc-caption--bottom">
-              <div class="hc-eyebrow">SPONSORING</div>
-              <h3 class="hc-title">Sponsoring</h3>
-              <p class="hc-text">Partner:innen, Förderungen und Kooperationen — professionell.</p>
-              <a class="hc-link" href="#sponsoring">Öffnen</a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.shop.tag">Shop</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shop.meta">Empfohlene Produkte</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.shop.title">Online-Shop</h3>
+              <p class="card__text" data-i18n="cards.shop.text">
+                Prints, Kataloge, Editionen — kuratiert, hochwertig, schnell erreichbar.
+              </p>
+              <a class="link" href="#shop" data-i18n="cards.open">Open</a>
             </div>
           </article>
 
-          <!-- Right / big -->
-          <article class="hc-item hc-item--right">
-            <a class="hc-media" href="#kontakt">
-              <img src="assets/card-support.jpg" alt="" loading="lazy" width="1400" height="1100" />
+          <article class="card" id="kontakt">
+            <a class="card__media" href="#kontakt">
+              <img src="assets/card-support.jpg" alt="" loading="lazy" width="1200" height="800" />
             </a>
-            <div class="hc-caption hc-caption--right">
-              <div class="hc-eyebrow">CONTACT</div>
-              <h3 class="hc-title">Kontakt</h3>
-              <p class="hc-text">Kooperationen, Sponsoring & Presse — schnelle Wege, klar strukturiert.</p>
-              <a class="hc-link" href="#kontakt">Öffnen</a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.contact.tag">Kontakt</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.contact.meta">Anfragen & Presse</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.contact.title">Kontakt</h3>
+              <p class="card__text" data-i18n="cards.contact.text">
+                Kooperationen, Sponsoring und Presse — schnelle Wege, klar strukturiert.
+              </p>
+              <a class="link" href="#kontakt" data-i18n="cards.open">Open</a>
             </div>
           </article>
         </div>
       </section>
-      
+
       <section class="section container" id="about" aria-label="About">
         <div class="split">
           <div>
@@ -573,5 +611,51 @@ File: /index.html
         initMenu();
       })();
     </script>
-  </body>
+    <div class="modal" id="searchModal" aria-hidden="true">
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Suche">
+        <div class="modal__top">
+          <strong>Suche</strong>
+          <button class="modal__close" type="button" id="closeSearch" aria-label="Suche schließen">✕</button>
+        </div>
+
+        <label class="field">
+          <span class="field__label">Suchbegriff</span>
+          <input class="field__input" id="searchInput" type="search" placeholder="z.B. Shows, Sponsoring, Shop …" />
+        </label>
+
+        <p class="muted" style="margin:10px 0 0;">Platzhalter — echte Suche kann später ergänzt werden.</p>
+      </div>
+      <script>
+        (function () {
+          const modal = document.getElementById("searchModal");
+          const openSearch = document.getElementById("openSearch");
+          const closeSearch = document.getElementById("closeSearch");
+          const closeBackdrop = document.getElementById("closeSearchBackdrop");
+          const input = document.getElementById("searchInput");
+
+          function openModal() {
+            if (!modal) return;
+            modal.setAttribute("aria-hidden", "false");
+            document.documentElement.classList.add("is-locked");
+            setTimeout(() => input?.focus(), 0);
+          }
+
+          function closeModal() {
+            if (!modal) return;
+            modal.setAttribute("aria-hidden", "true");
+            document.documentElement.classList.remove("is-locked");
+          }
+
+          openSearch?.addEventListener("click", openModal);
+          closeSearch?.addEventListener("click", closeModal);
+          closeBackdrop?.addEventListener("click", closeModal);
+
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal?.getAttribute("aria-hidden") === "false") closeModal();
+          });
+        })();
+      </script>
+    <button class="modal__backdrop" type="button" id="closeSearchBackdrop" aria-label="Suche schließen"></button>
+    </body>
+  </div>
 </html>
