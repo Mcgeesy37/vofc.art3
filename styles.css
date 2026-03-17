@@ -841,3 +841,31 @@ p{margin:0}
 .icon-btn svg{
   filter: none !important;
 }
+
+/* ===== LOUPE: iOS Blue Fix ===== */
+
+/* 1) Make sure the SVG is NOT using system-blue */
+.icon-btn{
+  color: var(--ink) !important;      /* currentColor -> black */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* 2) Remove iOS tap highlight */
+html, body, button, a{
+  -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+}
+
+/* 3) Remove focus ring on iOS Safari */
+.icon-btn:focus,
+.icon-btn:focus-visible,
+.icon-btn:active{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 4) Make sure no filter makes it glow */
+.icon-btn svg{
+  fill: currentColor !important;
+  filter: none !important;
+}
