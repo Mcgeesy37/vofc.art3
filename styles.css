@@ -869,3 +869,19 @@ html, body, button, a{
   fill: currentColor !important;
   filter: none !important;
 }
+
+/* ===== Remove loupe shadow (SVG) ===== */
+.utility .icon-btn svg,
+#openSearch svg{
+  filter: none !important;
+  -webkit-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Falls der Schatten am Button selbst hängt */
+.utility .icon-btn,
+#openSearch{
+  box-shadow: none !important;
+  background: transparent !important;
+  outline: none !important;
+}
