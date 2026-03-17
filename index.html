@@ -101,33 +101,33 @@ File: /index.html
         </div>
       </div>
 
-      <div class="container hero">
-        <div class="hero__left">
-          <div class="hero-media">
-            <img
-              src="assets/hero.jpg"
-              alt="Artwork / Exhibition impression"
-              width="1400"
-              height="900"
-              loading="eager"
-            />
-            <div class="hero-media__veil" aria-hidden="true"></div>
-          </div>
+      <div class="container hero hero--banner">
+        <!-- Banner (Desktop: volle Containerbreite) -->
+        <div class="hero-media hero-media--banner">
+          <img
+            src="assets/hero.jpg"
+            alt="Artwork / Exhibition impression"
+            width="1800"
+            height="950"
+            loading="eager"
+          />
+          <div class="hero-media__veil" aria-hidden="true"></div>
         </div>
 
-        <div class="hero__right">
+        <!-- Textblock darunter (links ausgerichtet) -->
+        <div class="hero-copy">
           <p class="kicker" data-i18n="hero.kicker">Voices of Creation e.V.</p>
-          <h1 class="title" data-i18n="hero.title">A platform for contemporary art, culture & creation.</h1>
+          <h1 class="title" data-i18n="hero.title">Plattform für zeitgenössische Kunst, Kultur & Creation.</h1>
           <p class="lead" data-i18n="hero.lead">
             Entdecken Sie Ausstellungen, Shows und Partnerschaften — und kontaktieren Sie uns direkt.
           </p>
 
           <div class="cta-row">
-            <a class="btn btn--primary" href="#blog" data-i18n="hero.ctaPrimary">Explore</a>
+            <a class="btn btn--primary" href="#blog" data-i18n="hero.ctaPrimary">Entdecken</a>
             <a class="btn btn--ghost" href="#kontakt" data-i18n="hero.ctaSecondary">Kontakt</a>
           </div>
 
-          <!-- mid menu: edgy/collage -->
+          <!-- mid menu bleibt (wie bisher) -->
           <nav class="mid-menu" aria-label="Quick categories">
             <a class="mid-item mid-item--a comingsoon" href="ausstellungen.html">
               <span class="mid-item__kicker" data-i18n="mid.exhibitions.kicker">Kategorie</span>
@@ -157,7 +157,7 @@ File: /index.html
           </nav>
         </div>
       </div>
-
+      
       <div class="container announcement" id="tickets">
         <div class="announcement__box">
           <strong data-i18n="announce.title">Hinweis</strong>
@@ -250,31 +250,6 @@ File: /index.html
               <a class="link" href="#kontakt" data-i18n="cards.open">Open</a>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section container" id="about" aria-label="About">
-        <div class="split">
-          <div>
-            <h2 data-i18n="about.title">About Voices of Creation e.V.</h2>
-            <p class="muted" data-i18n="about.text">
-              Wir verbinden Künstler:innen, Förder:innen und Publikum — mit Projekten, Ausstellungen und digitalen Formaten.
-            </p>
-            <div class="pill-row">
-              <span class="pill" data-i18n="about.pill1">Kunst & Kultur</span>
-              <span class="pill" data-i18n="about.pill2">Shows</span>
-              <span class="pill" data-i18n="about.pill3">Sponsoring</span>
-            </div>
-          </div>
-
-          <div class="callout" id="kontakt-box">
-            <h3 data-i18n="contact.title">Kontakt</h3>
-            <p class="muted" data-i18n="contact.text">Für Kooperationen, Sponsoring und Presseanfragen.</p>
-            <ul class="list">
-              <li><span data-i18n="contact.email">E-Mail:</span> <a href="mailto:info@vofc.art">info@vofc.art</a></li>
-              <li><span data-i18n="contact.web">Web:</span> <a href="https://www.vofc.art/" rel="noreferrer">www.vofc.art</a></li>
-            </ul>
-          </div>
         </div>
       </section>
     </main>
