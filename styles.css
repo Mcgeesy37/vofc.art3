@@ -14,7 +14,8 @@ File: /styles.css
   --gap:20px;
 
   --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
-  --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+  --sans: "Arial Narrow", "HelveticaNeue-CondensedBold", "Helvetica Neue Condensed",
+        "Roboto Condensed", Arial, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 *{box-sizing:border-box}
