@@ -894,3 +894,29 @@ html, body, button, a{
   box-shadow: none !important;
   text-shadow: none !important;
 }
+
+/* ===== Lupe komplett ohne Shadow (Button + SVG) ===== */
+.icon-btn,
+.icon-btn:focus,
+.icon-btn:focus-visible,
+.icon-btn:active{
+  box-shadow: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  text-shadow: none !important;
+}
+
+.icon-btn svg,
+.icon-btn svg *{
+  filter: none !important;              /* kills drop-shadow */
+  -webkit-filter: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Falls du irgendwo drop-shadow nutzt */
+.icon-btn{
+  filter: none !important;
+  -webkit-filter: none !important;
+}
