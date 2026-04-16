@@ -1002,3 +1002,12 @@ button:focus{ outline: none; }
 svg{
   filter: none;
 }
+
+#openSearch{ 
+  box-shadow: none !important;
+  filter: none !important;
+}
+#openSearch svg{ 
+  filter: none !important;
+  -webkit-filter: none !important;
+}
