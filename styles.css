@@ -1011,3 +1011,7 @@ svg{
   filter: none !important;
   -webkit-filter: none !important;
 }
+
+.card--exhibitions .card__media img{
+  object-position: 50% 0%;
+}
