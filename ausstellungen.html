@@ -1,6 +1,3 @@
-<!--
-File: /ausstellungen.html
--->
 <!doctype html>
 <html lang="de">
   <head>
@@ -8,7 +5,10 @@ File: /ausstellungen.html
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#0b0b0c" />
     <title>Ausstellungen — Voices of Creation e.V.</title>
-    <meta name="description" content="Ausstellungen — coming soon." />
+    <meta
+      name="description"
+      content="Ausstellungen — Andreas Fux – Queere Kunst in der DDR. Biografien zwischen Underground und Propaganda."
+    />
 
     <link rel="icon" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/icon-192.png" />
@@ -28,44 +28,40 @@ File: /ausstellungen.html
     </script>
 
     <style>
-      /* small page-specific layout, keeps global CSS untouched */
-      .page-hero {
-        padding: 34px 0 50px 0;
-      }
-      .page-hero__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-      .coming {
+      /* page-specific only */
+      .page-hero { padding: 34px 0 50px 0; }
+      .page-hero__grid { display:grid; grid-template-columns: 1fr; gap:18px; }
+      .panel {
         border-radius: var(--radius-lg);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid rgba(0,0,0,.12);
+        background: rgba(255,255,255,.65);
         box-shadow: 0 12px 36px rgba(0,0,0,.08);
         padding: 18px;
       }
-      .coming__badge {
-        display: inline-flex;
+      .badge {
+        display:inline-flex;
         padding: 8px 12px;
         border: 1px solid var(--line);
         border-radius: 12px;
         background: rgba(255,255,255,.75);
         font-size: 12px;
       }
-      .coming h1 {
-        margin-top: 12px;
-        font-size: clamp(34px, 4.4vw, 52px);
-        line-height: 1.05;
-      }
-      .coming p { margin-top: 10px; color: var(--muted); max-width: 60ch; }
+      .panel h1 { margin-top: 12px; font-size: clamp(34px,4.4vw,52px); line-height:1.05; }
+      .panel h2 { margin-top: 14px; font-size: 22px; }
+      .panel p { margin-top: 10px; color: var(--muted); max-width: 70ch; }
+      .panel .lead { color: var(--ink); }
+      .rule { height:1px; background: var(--line); margin: 16px 0; border:0; }
+      .places { margin: 0; padding-left: 18px; color: var(--muted); }
+      .places li { margin: 8px 0; }
+      .addr { display:block; color: var(--muted); margin-top: 4px; }
       .back-row { margin-top: 16px; display:flex; gap:12px; flex-wrap:wrap; }
       .hero-mini {
         border-radius: var(--radius-lg);
-        overflow: hidden;
+        overflow:hidden;
         border: 1px solid rgba(0,0,0,.10);
         box-shadow: var(--shadow);
       }
-      .hero-mini img { width:100%; height:100%; object-fit:cover; }
+      .hero-mini img { width:100%; height:100%; object-fit:cover; display:block; }
       @media (min-width: 860px){
         .page-hero__grid { grid-template-columns: .95fr 1.05fr; align-items: stretch; }
       }
@@ -89,16 +85,66 @@ File: /ausstellungen.html
 
     <main class="container page-hero">
       <div class="page-hero__grid">
-        <section class="coming" aria-label="Coming soon">
-          <span class="coming__badge" data-i18n="coming.badge">Coming soon</span>
-          <h1 data-i18n="coming.title">Ausstellungen</h1>
-          <p data-i18n="coming.text">
-            Diese Seite befindet sich im Aufbau. In Kürze finden Sie hier kuratierte Ausstellungen, Archive und Highlights.
+        <section class="panel" aria-label="Exhibition detail">
+          <span class="badge" data-i18n="ex.badge">Ausstellung</span>
+
+          <h1 data-i18n="ex.title">Andreas Fux – Queere Kunst in der DDR</h1>
+          <p class="lead" data-i18n="ex.subtitle">Biografien zwischen Underground und Propaganda</p>
+
+          <p data-i18n="ex.p1">
+            Die Arbeiten von Andreas Fux sind Teil einer umfassenden Ausstellung zur queeren Kunst in der DDR, die sich mit
+            Lebensrealitäten zwischen Unsichtbarkeit, Kontrolle und künstlerischem Widerstand auseinandersetzt.
           </p>
 
+          <p data-i18n="ex.p2">
+            Die Ausstellung wird unter anderem in institutionellen Kontexten wie der Neuen Gesellschaft für Bildende Kunst (nGbK)
+            in Berlin präsentiert und ist eingebunden in Kooperationen mit weiteren Ausstellungshäusern und Archiven, darunter das
+            Mitte Museum Berlin sowie das Werkbundarchiv – Museum der Dinge.
+          </p>
+
+          <p data-i18n="ex.p3">
+            Im Zentrum stehen künstlerische Biografien, die sich unter den Bedingungen staatlicher Überwachung entwickelten.
+            Queere Identitäten mussten oft verschlüsselt dargestellt werden, während gleichzeitig ein subtiler, aber klarer
+            Widerstand gegen gesellschaftliche und politische Normen entstand.
+          </p>
+
+          <p data-i18n="ex.p4">
+            Andreas Fux knüpft mit seiner Arbeit an diese historischen Linien an und macht sichtbar, was über Jahrzehnte
+            marginalisiert wurde. Seine Werke bewegen sich zwischen persönlicher Erinnerung, dokumentarischem Zugriff und
+            künstlerischer Transformation.
+          </p>
+
+          <p data-i18n="ex.p5">
+            Mehr als 40 Jahre nach dem Ende der DDR eröffnet die Ausstellung einen neuen Blick auf queere Kunstgeschichte – nicht
+            als Randthema, sondern als integralen Bestandteil kultureller Entwicklung.
+          </p>
+
+          <p data-i18n="ex.p6">
+            Aktuelle Beiträge, unter anderem mediale Berichterstattung wie ein Feature beim rbb, unterstreichen die Relevanz
+            dieser Positionen und ihre Bedeutung für die heutige Debatte um Sichtbarkeit, Identität und künstlerische Freiheit.
+          </p>
+
+          <hr class="rule" />
+
+          <h2 data-i18n="ex.placesTitle">Ausstellungsorte</h2>
+          <ul class="places">
+            <li>
+              <strong>Neue Gesellschaft für Bildende Kunst (nGbK)</strong>
+              <span class="addr">Karl-Liebknecht-Straße 11/13, 10178 Berlin</span>
+            </li>
+            <li>
+              <strong>Mitte Museum Berlin</strong>
+              <span class="addr">Pankstraße 47, 13357 Berlin</span>
+            </li>
+            <li>
+              <strong>Werkbundarchiv – Museum der Dinge</strong>
+              <span class="addr">Oranienstraße 25, 10999 Berlin</span>
+            </li>
+          </ul>
+
           <div class="back-row">
-            <a class="btn btn--primary" href="./" data-i18n="coming.back">Zurück zur Startseite</a>
-            <a class="btn btn--ghost" href="mailto:info@vofc.art" data-i18n="coming.mail">Kontakt</a>
+            <a class="btn btn--primary" href="./" data-i18n="ex.back">Zurück zur Startseite</a>
+            <a class="btn btn--ghost" href="mailto:info@vofc.art" data-i18n="ex.mail">Kontakt</a>
           </div>
         </section>
 
@@ -127,24 +173,38 @@ File: /ausstellungen.html
           "legal.imprint": "Impressum",
           "legal.privacy": "Datenschutz",
           "legal.copy": "© {{year}} Voices of Creation e.V.",
-          "coming.badge": "Coming soon",
-          "coming.title": "Ausstellungen",
-          "coming.text":
-            "Diese Seite befindet sich im Aufbau. In Kürze finden Sie hier kuratierte Ausstellungen, Archive und Highlights.",
-          "coming.back": "Zurück zur Startseite",
-          "coming.mail": "Kontakt",
+
+          "ex.badge": "Ausstellung",
+          "ex.title": "Andreas Fux – Queere Kunst in der DDR",
+          "ex.subtitle": "Biografien zwischen Underground und Propaganda",
+          "ex.p1": "Die Arbeiten von Andreas Fux sind Teil einer umfassenden Ausstellung zur queeren Kunst in der DDR, die sich mit Lebensrealitäten zwischen Unsichtbarkeit, Kontrolle und künstlerischem Widerstand auseinandersetzt.",
+          "ex.p2": "Die Ausstellung wird unter anderem in institutionellen Kontexten wie der Neuen Gesellschaft für Bildende Kunst (nGbK) in Berlin präsentiert und ist eingebunden in Kooperationen mit weiteren Ausstellungshäusern und Archiven, darunter das Mitte Museum Berlin sowie das Werkbundarchiv – Museum der Dinge.",
+          "ex.p3": "Im Zentrum stehen künstlerische Biografien, die sich unter den Bedingungen staatlicher Überwachung entwickelten. Queere Identitäten mussten oft verschlüsselt dargestellt werden, während gleichzeitig ein subtiler, aber klarer Widerstand gegen gesellschaftliche und politische Normen entstand.",
+          "ex.p4": "Andreas Fux knüpft mit seiner Arbeit an diese historischen Linien an und macht sichtbar, was über Jahrzehnte marginalisiert wurde. Seine Werke bewegen sich zwischen persönlicher Erinnerung, dokumentarischem Zugriff und künstlerischer Transformation.",
+          "ex.p5": "Mehr als 40 Jahre nach dem Ende der DDR eröffnet die Ausstellung einen neuen Blick auf queere Kunstgeschichte – nicht als Randthema, sondern als integralen Bestandteil kultureller Entwicklung.",
+          "ex.p6": "Aktuelle Beiträge, unter anderem mediale Berichterstattung wie ein Feature beim rbb, unterstreichen die Relevanz dieser Positionen und ihre Bedeutung für die heutige Debatte um Sichtbarkeit, Identität und künstlerische Freiheit.",
+          "ex.placesTitle": "Ausstellungsorte",
+          "ex.back": "Zurück zur Startseite",
+          "ex.mail": "Kontakt",
         },
         en: {
           "nav.home": "Home",
           "legal.imprint": "Imprint",
           "legal.privacy": "Privacy",
           "legal.copy": "© {{year}} Voices of Creation e.V.",
-          "coming.badge": "Coming soon",
-          "coming.title": "Exhibitions",
-          "coming.text":
-            "This page is under construction. Soon you'll find curated exhibitions, archives and highlights here.",
-          "coming.back": "Back to homepage",
-          "coming.mail": "Contact",
+
+          "ex.badge": "Exhibition",
+          "ex.title": "Andreas Fux – Queer Art in the GDR",
+          "ex.subtitle": "Biographies between underground and propaganda",
+          "ex.p1": "The works of Andreas Fux are part of a larger exhibition on queer art in the GDR, exploring lives shaped by invisibility, control and artistic resistance.",
+          "ex.p2": "The exhibition is presented in institutional contexts such as the Neue Gesellschaft für Bildende Kunst (nGbK) in Berlin and is embedded in collaborations with further venues and archives, including the Mitte Museum Berlin and the Werkbundarchiv – Museum of Things.",
+          "ex.p3": "At its center are artistic biographies developed under conditions of state surveillance. Queer identities often had to be coded, while subtle yet clear resistance to social and political norms emerged.",
+          "ex.p4": "With his work, Andreas Fux connects to these historical lines and makes visible what was marginalized for decades. His pieces move between personal memory, documentary approaches and artistic transformation.",
+          "ex.p5": "More than 40 years after the end of the GDR, the exhibition offers a new perspective on queer art history — not as a side topic, but as an integral part of cultural development.",
+          "ex.p6": "Current contributions, including media coverage such as an rbb feature, underline the relevance of these positions and their importance for today’s debate on visibility, identity and artistic freedom.",
+          "ex.placesTitle": "Venues",
+          "ex.back": "Back to homepage",
+          "ex.mail": "Contact",
         },
       };
 
