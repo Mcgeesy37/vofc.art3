@@ -7,8 +7,9 @@ File: /impressum.html
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#0b0b0c" />
-    <title>Impressum — Voices of Creation e.V.</title>
-    <meta name="description" content="Impressum — Voices of Creation e.V." />
+    <title>Impressum — Voices of Creation n.e.V.</title>
+    <meta name="description" content="Impressum — Voices of Creation n.e.V." />
+
     <link rel="icon" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/icon-192.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -20,65 +21,79 @@ File: /impressum.html
         <a class="brand brand--small" href="./" aria-label="Home">
           <img src="assets/logo.png" alt="Voices of Creation Logo" width="180" height="58" />
         </a>
-        <nav class="simple-nav">
+
+        <nav class="simple-nav" aria-label="Rechtliches & Seiten">
           <a href="./">Home</a>
-          <a href="datenschutz.html">Datenschutz</a>
           <a href="ausstellungen.html">Ausstellungen</a>
+          <a href="sponsoring.html">Sponsoring</a>
+          <a href="datenschutz.html">Datenschutz</a>
         </nav>
       </div>
     </header>
 
     <main class="container legal">
       <h1>Impressum</h1>
-      <p class="muted">
-        Platzhalter — bitte mit den offiziellen Vereinsdaten befüllen (Adresse, Vertretung, Register, Kontakt).
-      </p>
 
-      <section class="legal__box">
-        <h2>Angaben gemäß § 5 TMG</h2>
+      <section class="legal__box" aria-label="Impressumsangaben">
+        <h2>Angaben gemäß § 5 DDG</h2>
         <p>
-          Voices of Creation e.V.<br />
-          Straße Hausnummer<br />
-          PLZ Ort<br />
+          Voices of Creation n.e.V.<br />
+          Ottomar-Geschke-Straße 37<br />
+          12555 Berlin<br />
           Deutschland
         </p>
 
-        <h2>Vertreten durch</h2>
-        <p>Vorstand: [Name], [Name]</p>
+        <h2>Vertreten durch den Vorstand</h2>
+        <p>
+          Sven Appelt – 1. Vorsitzender<br />
+          Yvonne Grünewald – 2. Vorsitzende<br />
+          Michael Godglück – Schatzmeister<br />
+          Florian Ihlow – Vorstandsmitglied
+        </p>
+
+        <h2>Vereinsregister</h2>
+        <p>
+          Eingetragen beim Amtsgericht Berlin<br />
+          Registernummer: Eintragung ins Vereinsregister ist beantragt.
+        </p>
 
         <h2>Kontakt</h2>
         <p>
-          E-Mail: <a href="mailto:info@vofc.art">info@vofc.art</a><br />
-          Website: <a href="https://www.vofc.art/" rel="noreferrer">www.vofc.art</a>
+          E-Mail: <a href="mailto:info@vofc.art">info@vofc.art</a>
         </p>
 
-        <h2>Registereintrag</h2>
+        <h2>Verantwortlich für den Inhalt</h2>
         <p>
-          Vereinsregister: [Registergericht]<br />
-          Registernummer: [Nummer]
+          Sven Appelt<br />
+          Ottomar-Geschke-Straße 37<br />
+          12555 Berlin<br />
+          Deutschland
         </p>
-
-        <h2>Haftung für Inhalte</h2>
-        <p>Platzhaltertext. (Empfehlung: rechtlich geprüften Text einsetzen.)</p>
-
-        <h2>Haftung für Links</h2>
-        <p>Platzhaltertext. (Empfehlung: rechtlich geprüften Text einsetzen.)</p>
-
-        <h2>Urheberrecht</h2>
-        <p>Platzhaltertext. (Empfehlung: rechtlich geprüften Text einsetzen.)</p>
       </section>
 
-      <p><a class="link" href="./">← Zurück zur Startseite</a></p>
+      <p>
+        <a class="link" href="./">← Zurück zur Startseite</a>
+      </p>
     </main>
 
     <footer class="site-footer">
-      <div class="container subfooter">
+      <div class="container subfooter" aria-label="Footer Legal">
         <div class="subfooter__left">
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
         </div>
+
         <div class="subfooter__right">
-          <span class="muted">© <span id="year"></span> Voices of Creation e.V.</span>
+          <span class="muted">
+            © <span id="year"></span> Voices of Creation n.e.V. — Website by
+            <a
+              href="https://coresetup.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline; text-underline-offset: 3px;"
+              >CoreSetup Studio</a
+            >
+          </span>
         </div>
       </div>
     </footer>
