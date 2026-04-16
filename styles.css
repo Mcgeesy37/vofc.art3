@@ -1015,3 +1015,8 @@ svg{
 .card--exhibitions .card__media img{
   object-position: 50% 0%;
 }
+
+/* Sponsoring-Bild oben „ankleben“ (wie gewünscht) */
+.card--sponsoring .card__media img{
+  object-position: top center;
+}
