@@ -921,3 +921,46 @@ html, body, button, a{
   filter: none !important;
   -webkit-filter: none !important;
 }
+
+/* ===== FINAL LOUPE FIX (kills any shadow / focus glow) ===== */
+#openSearch,
+#openSearch *{
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  text-shadow: none !important;
+}
+
+#openSearch{
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+}
+
+#openSearch:focus,
+#openSearch:focus-visible,
+#openSearch:active{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#openSearch svg{
+  display: block !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+#openSearch svg,
+#openSearch svg *{
+  filter: none !important;
+  -webkit-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Optional: if browser still draws a focus ring */
+button:focus{ outline: none; }
