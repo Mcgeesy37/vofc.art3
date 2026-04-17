@@ -38,7 +38,11 @@ hr{border:none;border-top:1px solid var(--line);margin:14px 0}
 .section{padding:56px 0}
 .section-head{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
 
-h1,h2,h3,h4{margin:0;font-family:var(--serif);letter-spacing:-.02em}
+h1,h2,h3,h4{
+  margin:0;
+  font-family:var(--sans);
+  letter-spacing:-.01em; /* optional, wirkt bei Arial Narrow cleaner */
+}
 h2{font-size:clamp(26px,3vw,36px)}
 p{margin:0}
 .muted{color:var(--muted)}
