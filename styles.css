@@ -1042,3 +1042,8 @@ svg{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+h1,h2,h3,h4{
+  font-family: var(--sans);
+  letter-spacing: -.01em; /* optional, damit’s nicht “zu eng” wirkt */
+}
+
