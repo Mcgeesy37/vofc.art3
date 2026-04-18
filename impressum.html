@@ -13,6 +13,42 @@ File: /impressum.html
     <link rel="icon" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/icon-192.png" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Page-only styling to match the “clean / two-column blocks” look (HUGO BOSS style) -->
+    <style>
+      .impressum-grid{
+        display:grid;
+        grid-template-columns: 1fr;
+        gap:18px;
+        margin-top:14px;
+      }
+      .impressum-block{
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(0,0,0,.12);
+        background: rgba(255,255,255,.62);
+        box-shadow: 0 12px 36px rgba(0,0,0,.08);
+        padding: 18px;
+      }
+      .impressum-block h2{
+        font-family: var(--sans);
+        font-size: 13px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: rgba(16,17,20,.65);
+        margin: 0 0 10px 0;
+      }
+      .impressum-block p{
+        margin: 0;
+        color: var(--ink);
+        line-height: 1.6;
+      }
+      .impressum-block p + p{ margin-top: 10px; }
+      .impressum-block a{ text-decoration: underline; text-underline-offset: 3px; }
+
+      @media (min-width: 860px){
+        .impressum-grid{ grid-template-columns: 1fr 1fr; }
+      }
+    </style>
   </head>
 
   <body>
@@ -34,43 +70,48 @@ File: /impressum.html
     <main class="container legal">
       <h1>Impressum</h1>
 
-      <section class="legal__box" aria-label="Impressumsangaben">
-        <h2>Angaben gemäß § 5 DDG</h2>
-        <p>
-          <strong>Voices of Creation n.e.V.</strong><br />
-          Ottomar-Geschke-Straße 37<br />
-          12555 Berlin<br />
-          Deutschland
-        </p>
+      <div class="impressum-grid" aria-label="Impressumsangaben">
+        <section class="impressum-block">
+          <h2>Angaben gemäß § 5 DDG</h2>
+          <p>
+            <strong>Voices of Creation n.e.V.</strong><br />
+            Ottomar-Geschke-Straße 37<br />
+            12555 Berlin<br />
+            Deutschland
+          </p>
 
-        <h2>Vertreten durch den Vorstand</h2>
-        <p>
-          Sven Appelt – 1. Vorsitzender<br />
-          Sylvie Mopita – 2. Vorsitzende<br />
-          Dagmar Kalmus – Schatzmeister
-        </p>
+          <p>
+            <strong>Vertreten durch den Vorstand:</strong><br />
+            Sven Appelt – 1. Vorsitzender<br />
+            Yvonne Grünewald – 2. Vorsitzende<br />
+            Michael Godglück – Schatzmeister<br />
+            Florian Ihlow – Vorstandsmitglied
+          </p>
 
-        <h2>Vereinsregister</h2>
-        <p>
-          Eingetragen beim Amtsgericht Berlin<br />
-          Registernummer: Eintragung ins Vereinsregister ist beantragt.
-        </p>
+          <p>
+            <strong>Vereinsregister:</strong><br />
+            Eingetragen beim Amtsgericht Berlin<br />
+            Registernummer: Eintragung ins Vereinsregister ist beantragt.
+          </p>
+        </section>
 
-        <h2>Kontakt</h2>
-        <p>
-          E-Mail: <a href="mailto:info@vofc.art">info@vofc.art</a>
-        </p>
+        <section class="impressum-block">
+          <h2>Kontakt</h2>
+          <p>
+            E-Mail: <a href="mailto:info@vofc.art">info@vofc.art</a>
+          </p>
 
-        <h2>Verantwortlich für den Inhalt</h2>
-        <p>
-          Sven Appelt<br />
-          Ottomar-Geschke-Straße 37<br />
-          12555 Berlin<br />
-          Deutschland
-        </p>
-      </section>
+          <p>
+            <strong>Verantwortlich für den Inhalt:</strong><br />
+            Sven Appelt<br />
+            Ottomar-Geschke-Straße 37<br />
+            12555 Berlin<br />
+            Deutschland
+          </p>
+        </section>
+      </div>
 
-      <p>
+      <p style="margin-top:18px;">
         <a class="link" href="./">← Zurück zur Startseite</a>
       </p>
     </main>
