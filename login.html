@@ -1,0 +1,401 @@
+<!--
+File: /login.html
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+
+    <title>Akkreditierung — PRICE TAG</title>
+    <meta
+      name="description"
+      content="Akkreditierung für PRICE TAG – SS27 Collection am 03. Juli 2026 in Berlin-Moabit."
+    />
+
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .accreditation-page{
+        padding: 44px 20px 70px;
+      }
+
+      .accreditation-shell{
+        max-width: 920px;
+        margin: 0 auto;
+      }
+
+      .accreditation-card{
+        background: rgba(255,255,255,.72);
+        border: 1px solid rgba(16,17,20,.12);
+        border-radius: 22px;
+        box-shadow: 0 18px 60px rgba(0,0,0,.10);
+        overflow: hidden;
+      }
+
+      .accreditation-hero{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 28px;
+        border-bottom: 1px solid rgba(16,17,20,.10);
+      }
+
+      .accreditation-logo{
+        max-width: 210px;
+        height: auto;
+      }
+
+      .accreditation-kicker{
+        font-size: 13px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+
+      .accreditation-title{
+        font-size: clamp(36px, 5vw, 62px);
+        line-height: .96;
+        letter-spacing: -.04em;
+        margin: 0;
+      }
+
+      .accreditation-meta{
+        margin-top: 18px;
+        display: grid;
+        gap: 6px;
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .accreditation-intro{
+        margin-top: 18px;
+        color: var(--muted);
+        max-width: 68ch;
+      }
+
+      .accreditation-form{
+        padding: 28px;
+        display: grid;
+        gap: 22px;
+      }
+
+      .form-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .form-field{
+        display: grid;
+        gap: 7px;
+      }
+
+      .form-field label,
+      .form-group-title{
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .form-field input,
+      .form-field textarea,
+      .form-field select{
+        width: 100%;
+        border: 1px solid rgba(16,17,20,.18);
+        background: rgba(255,255,255,.86);
+        border-radius: 14px;
+        padding: 13px 14px;
+        font: inherit;
+        color: var(--ink);
+        outline: none;
+      }
+
+      .form-field textarea{
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-field input:focus,
+      .form-field textarea:focus{
+        border-color: rgba(16,17,20,.42);
+        box-shadow: 0 0 0 4px rgba(16,17,20,.06);
+      }
+
+      .choice-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .choice{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(16,17,20,.12);
+        background: rgba(255,255,255,.55);
+        border-radius: 14px;
+        padding: 11px 12px;
+      }
+
+      .choice input{
+        width: 18px;
+        height: 18px;
+        accent-color: #101114;
+      }
+
+      .form-divider{
+        height: 1px;
+        background: rgba(16,17,20,.12);
+        margin: 2px 0;
+      }
+
+      .form-note{
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .submit-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .submit-button{
+        border: 0;
+        background: var(--bg);
+        color: #fff;
+        border-radius: 999px;
+        padding: 14px 22px;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+        letter-spacing: .02em;
+      }
+
+      .submit-button:hover{
+        opacity: .92;
+      }
+
+      .success-preview{
+        margin-top: 18px;
+        border: 1px solid rgba(16,17,20,.12);
+        border-radius: 18px;
+        padding: 18px;
+        background: rgba(244,241,236,.76);
+      }
+
+      .success-preview strong{
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      @media (min-width: 760px){
+        .accreditation-hero{
+          grid-template-columns: .75fr 1.25fr;
+          align-items: start;
+        }
+
+        .form-grid{
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .form-field--full{
+          grid-column: 1 / -1;
+        }
+
+        .choice-grid{
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="simple-header">
+      <div class="container simple-header__row">
+        <a class="brand brand--small" href="./" aria-label="Home">
+          <img src="assets/logo.png" alt="Voices of Creation Logo" width="180" height="58" />
+        </a>
+
+        <nav class="simple-nav" aria-label="Navigation">
+          <a href="./">Home</a>
+          <a href="ausstellungen.html">Ausstellungen</a>
+          <a href="sponsoring.html">Sponsoring</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="accreditation-page">
+      <div class="accreditation-shell">
+        <section class="accreditation-card" aria-label="Akkreditierung PRICE TAG">
+          <div class="accreditation-hero">
+            <div>
+              <!-- Optional: Fashion Week Logo hier ablegen als assets/berlin-fashion-week.png -->
+              <img
+                class="accreditation-logo"
+                src="assets/logo.png"
+                alt="Voices of Creation Logo"
+                width="240"
+                height="90"
+                loading="eager"
+              />
+            </div>
+
+            <div>
+              <p class="accreditation-kicker">Akkreditierung</p>
+              <h1 class="accreditation-title">PRICE TAG – SS27 Collection</h1>
+
+              <div class="accreditation-meta">
+                <span>03. Juli 2026</span>
+                <span>Kurt Menzel Elektromotorenfabrik, Berlin-Moabit</span>
+                <span>20:00 – 22:00 Uhr</span>
+              </div>
+
+              <p class="accreditation-intro">
+                Bitte registrieren Sie sich für die Veranstaltung. Nach Prüfung Ihrer Anfrage erhalten Sie eine
+                Bestätigung per E-Mail. Aufgrund begrenzter Kapazitäten ist die Akkreditierung erst nach finaler
+                Bestätigung gültig.
+              </p>
+            </div>
+          </div>
+
+          <form
+            class="accreditation-form"
+            action="https://formspree.io/f/DEIN-ENDPOINT"
+            method="POST"
+          >
+            <input type="hidden" name="event" value="PRICE TAG – SS27 Collection" />
+            <input type="hidden" name="_subject" value="Neue Akkreditierungsanfrage – PRICE TAG" />
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="firstName">Vorname*</label>
+                <input id="firstName" name="vorname" type="text" autocomplete="given-name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="lastName">Nachname*</label>
+                <input id="lastName" name="nachname" type="text" autocomplete="family-name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="email">E-Mail-Adresse*</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Telefon</label>
+                <input id="phone" name="telefon" type="tel" autocomplete="tel" />
+              </div>
+
+              <div class="form-field">
+                <label for="company">Unternehmen / Medium / Institution</label>
+                <input id="company" name="unternehmen_medium_institution" type="text" />
+              </div>
+
+              <div class="form-field">
+                <label for="profile">Instagram / TikTok / Website</label>
+                <input id="profile" name="instagram_tiktok_website" type="text" placeholder="https://..." />
+              </div>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div>
+              <p class="form-group-title">Funktion</p>
+              <div class="choice-grid">
+                <label class="choice"><input type="radio" name="funktion" value="Presse" /> Presse</label>
+                <label class="choice"><input type="radio" name="funktion" value="Influencer / Content Creator" /> Influencer / Content Creator</label>
+                <label class="choice"><input type="radio" name="funktion" value="Modebranche" /> Modebranche</label>
+                <label class="choice"><input type="radio" name="funktion" value="Partner" /> Partner</label>
+                <label class="choice"><input type="radio" name="funktion" value="Sponsor" /> Sponsor</label>
+                <label class="choice"><input type="radio" name="funktion" value="Studierende" /> Studierende</label>
+                <label class="choice"><input type="radio" name="funktion" value="Gast" /> Gast</label>
+                <label class="choice"><input type="radio" name="funktion" value="Sonstiges" /> Sonstiges</label>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="reason">Warum möchten Sie PRICE TAG besuchen?</label>
+              <textarea id="reason" name="grund_des_besuchs"></textarea>
+            </div>
+
+            <div>
+              <p class="form-group-title">Ich möchte mich akkreditieren für:</p>
+              <div class="choice-grid">
+                <label class="choice"><input type="checkbox" name="akkreditierung[]" value="Fashion Show" /> Fashion Show</label>
+                <label class="choice"><input type="checkbox" name="akkreditierung[]" value="Ausstellung Andreas Fux" /> Ausstellung Andreas Fux</label>
+                <label class="choice"><input type="checkbox" name="akkreditierung[]" value="Filminstallation von Sven Bergholz & Sven Appelt" /> Filminstallation von Sven Bergholz & Sven Appelt</label>
+                <label class="choice"><input type="checkbox" name="akkreditierung[]" value="Networking" /> Networking</label>
+                <label class="choice"><input type="checkbox" name="akkreditierung[]" value="Charity-Auktion" /> Charity-Auktion</label>
+              </div>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="choice-grid">
+              <label class="choice">
+                <input type="checkbox" name="datenschutz_akzeptiert" value="Ja" required />
+                Ich akzeptiere die <a href="datenschutz.html" target="_blank" rel="noopener noreferrer">Datenschutzbestimmungen</a>.
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="event_infos_erlaubt" value="Ja" />
+                Ich bin damit einverstanden, Informationen zur Veranstaltung zu erhalten.
+              </label>
+            </div>
+
+            <div class="submit-row">
+              <button class="submit-button" type="submit">Akkreditierung absenden</button>
+              <p class="form-note">* Pflichtfelder</p>
+            </div>
+
+            <div class="success-preview" aria-label="Hinweis nach dem Absenden">
+              <strong>Hinweis nach dem Absenden</strong>
+              Vielen Dank für Ihre Akkreditierungsanfrage zu PRICE TAG. Ihre Anfrage wurde erfolgreich übermittelt und wird geprüft.
+              Aufgrund begrenzter Kapazitäten erfolgt die finale Bestätigung per E-Mail.
+              <br /><br />
+              Voices of Creation e.V.<br />
+              <a href="mailto:team@cmusic.de">team@cmusic.de</a>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container subfooter" aria-label="Footer Legal">
+        <div class="subfooter__left">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+
+        <div class="subfooter__right">
+          <span class="muted">
+            © <span id="year"></span> Voices of Creation n.e.V. · Website by
+            <a
+              href="https://coresetup.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline; text-underline-offset: 3px;"
+              >CoreSetup Studio</a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
