@@ -388,17 +388,33 @@ File: /login.html
               </p>
             </div>
 
-            <div class="success-preview" aria-label="Hinweis nach dem Absenden">
-              <strong>Hinweis nach dem Absenden</strong>
-              Vielen Dank für Ihre Akkreditierungsanfrage zu PRICE TAG. Ihre Anfrage wurde erfolgreich übermittelt und wird geprüft.
-              Aufgrund begrenzter Kapazitäten erfolgt die finale Bestätigung per E-Mail.
-              <br /><br />
-              Voices of Creation e.V.<br />
-              <a href="mailto:team@cmusic.de">team@cmusic.de</a>
+            <div
+              id="formSuccess"
+              class="success-preview"
+              aria-label="Hinweis nach dem Absenden"
+              style="display: none;"
+            >
+              <strong>Vielen Dank für Ihre Akkreditierungsanfrage zu PRICE TAG.</strong>
+              <p>
+                Ihre Anfrage wurde erfolgreich übermittelt und wird geprüft.
+                Aufgrund begrenzter Kapazitäten erfolgt die finale Bestätigung per E-Mail.
+              </p>
+              <p>
+                Voices of Creation e.V.<br />
+                <a href="mailto:team@cmusic.de">team@cmusic.de</a>
+              </p>
             </div>
-          </form>
-        </section>
-      </div>
+
+            <div
+              id="formError"
+              class="success-preview"
+              style="display: none; border-color: rgba(180,0,0,.25); background: rgba(180,0,0,.06);"
+            >
+              <strong>Die Anfrage konnte nicht gesendet werden.</strong>
+              <p>
+                Bitte prüfen Sie Ihre Eingaben oder versuchen Sie es später erneut.
+              </p>
+            </div>
     </main>
 
     <footer class="site-footer">
