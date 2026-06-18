@@ -1,6 +1,7 @@
 <!--
 File: /login.html
 -->
+
 <!doctype html>
 
 <html lang="de">
@@ -30,6 +31,50 @@ File: /login.html
     border-radius: 22px;
     box-shadow: 0 18px 60px rgba(0,0,0,.10);
     overflow: hidden;
+  }
+  .bfw-notice{
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 24px;
+    align-items: center;
+    padding: 26px 28px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(16,17,20,.10);
+  }
+  .bfw-logo{
+    width: 110px;
+    height: auto;
+    display: block;
+  }
+  .bfw-text{
+    display: grid;
+    gap: 6px;
+  }
+  .bfw-kicker{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: .01em;
+  }
+  .bfw-headline{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -.02em;
+  }
+  .bfw-copy{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: clamp(20px, 2.4vw, 34px);
+    font-weight: 400;
+    line-height: 1.18;
+  }
+  .bfw-copy strong{
+    font-weight: 800;
   }
   .accreditation-hero{
     display: grid;
@@ -199,6 +244,15 @@ File: /login.html
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  @media (max-width: 640px){
+    .bfw-notice{
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .bfw-logo{
+      width: 120px;
+    }
+  }
 </style>
   </head>
   <body>
@@ -219,6 +273,23 @@ File: /login.html
 <main class="accreditation-page">
   <div class="accreditation-shell">
     <section class="accreditation-card" aria-label="Akkreditierung PRICE TAG">
+      <div class="bfw-notice" aria-label="Berlin Fashion Week Hinweis">
+        <img
+          class="bfw-logo"
+          src="assets/berlin-fashion-week.png"
+          alt="Berlin Fashion Week"
+          width="220"
+          height="220"
+          loading="eager"
+        />
+        <div class="bfw-text">
+          <p class="bfw-kicker">PRICE TAG</p>
+          <p class="bfw-headline">Offizielles Side Event der Berlin Fashion Week</p>
+          <p class="bfw-copy">
+            Diese Veranstaltung ist Teil der <strong>Berlin Fashion Week SS27.</strong>
+          </p>
+        </div>
+      </div>
       <div class="accreditation-hero">
         <div>
           <img
