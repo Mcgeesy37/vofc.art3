@@ -1,0 +1,656 @@
+<!--
+File: /index.html
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>Voices of Creation e.V. — Official Website</title>
+    <meta
+      name="description"
+      content="Voices of Creation e.V. — Ausstellungen, Highlights, Designprojekte, Shop, Kontakt."
+    />
+
+    <meta property="og:title" content="Voices of Creation e.V." />
+    <meta property="og:description" content="Ausstellungen, Highlights, Designprojekte, Shop, Kontakt." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.vofc.art/" />
+    <meta property="og:image" content="assets/og.jpg" />
+
+    <link rel="manifest" href="app.json" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      (function () {
+        const params = new URLSearchParams(location.search);
+        const fromQuery = params.get("lang");
+        const fromStorage = localStorage.getItem("vofc_lang");
+        const lang = (fromQuery || fromStorage || "de").toLowerCase();
+
+        if (lang !== "de" && lang !== "en") return;
+        localStorage.setItem("vofc_lang", lang);
+        document.documentElement.lang = lang;
+        window.__VOFC_LANG__ = lang;
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <!-- Utility bar: Newsletter – Search – Menu -->
+    <div class="utility">
+      <div class="container utility__inner">
+        <a class="utility__link" href="#newsletter">Newsletter</a>
+
+        <button class="icon-btn" type="button" id="openSearch" aria-label="Suche öffnen">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10.5 3a7.5 7.5 0 1 1 4.6 13.4l4.2 4.2-1.4 1.4-4.2-4.2A7.5 7.5 0 0 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn" type="button" id="openMenu" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 7h16v2H4V7Zm0 6h16v2H4v-2Zm0 6h16v2H4v-2Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="./" aria-label="Voices of Creation e.V. Home">
+          <img
+            class="brand__mark"
+            src="assets/logo.png"
+            alt="Voices of Creation Logo"
+            width="220"
+            height="72"
+            loading="eager"
+          />
+        </a>
+
+        <nav class="header-nav" aria-label="Primary">
+          <!-- Exhibitions opens its own page -->
+          <a
+            class="nav-link nav-link--comingsoon"
+            href="ausstellungen.html"
+            data-i18n="nav.exhibitions"
+            data-comingsoon="Coming soon"
+            >Ausstellungen</a
+          >
+          <a class="nav-link" href="#shows" data-i18n="nav.shows">Highlights</a>
+          <a class="nav-link" href="sponsoring.html" data-i18n="nav.sponsoring">Designprojekte</a>
+          <a class="nav-link" href="#shop" data-i18n="nav.shop">Shop</a>
+          <a class="nav-link" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+          <a class="nav-link nav-link--login" href="login.html">Login</a>
+        </nav>
+
+        <div class="header-actions">
+
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn" type="button" data-lang="de" aria-pressed="true">DE</button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="burger" type="button" id="openMenu" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="container hero hero--banner">
+        <!-- Banner (Desktop: volle Containerbreite) -->
+        <div class="hero-media hero-media--banner">
+          <img
+            src="assets/hero1.jpg"
+            alt="Artwork / Exhibition impression"
+            width="1800"
+            height="950"
+            loading="eager"
+          />
+          <div class="hero-media__veil" aria-hidden="true"></div>
+        </div>
+
+        <!-- Textblock darunter (links ausgerichtet) -->
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero.kicker">Voices of Creation e.V.</p>
+          <h1 class="title" data-i18n="hero.title">Plattform für Kunst, Kultur & kreative Zusammenarbeit.</h1>
+          <p class="lead" data-i18n="hero.lead">
+            Voices of Creation verbindet Künstler:innen, Designer:innen, Musiker:innen und Kulturschaffende. Gemeinsam entwickeln wir Ideen, schaffen Netzwerke und bringen daraus entstehende Projekte in die Öffentlichkeit.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#blog" data-i18n="hero.ctaPrimary">Entdecken</a>
+            <a class="btn btn--ghost" href="#kontakt" data-i18n="hero.ctaSecondary">Kontakt</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container announcement announcement--alert" id="tickets">
+  <div class="announcement__box">
+    <strong class="announcement__title" data-i18n="announce.title">Wichtiger Hinweis</strong>
+
+    <span class="announcement__text" data-i18n="announce.text">
+      Diese Seite befindet sich aktuell im Aufbau. Startseite ist live — weitere Inhalte folgen.
+    </span>
+
+    <a class="announcement__link" href="ausstellungen.html" data-i18n="announce.link">Mehr erfahren</a>
+  </div>
+</div>
+    </header>
+
+    <main id="main">
+      <section class="section container" id="blog" aria-label="Highlights">
+        <div class="section-head">
+          <h2 data-i18n="sections.highlights">Highlights</h2>
+          <ul class="muted highlights-list">
+            <li>Ausstellung Andreas Fuchs</li>
+            <li>Vorbereitung Design-Show RADIOACTIVITY</li>
+            <li>Ausstellungsausarbeitung „Andreas ernannte sie sein Püppchen“</li>
+          </ul>
+        </div>
+
+        <div class="cards">
+          <article class="card" id="shows">
+            <a class="card__media" href="#shows">
+              <img src="assets/card-collections.jpg" alt="" loading="lazy" width="1200" height="800" />
+            </a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.shows.tag">Projekte</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shows.meta">Positionen</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shows.meta2">Kooperationen</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.shows.title">Aktuelle Highlights</h3>
+              <p class="card__text" data-i18n="cards.shows.text">
+                Ausstellungen, Design-Shows und neue Kooperationen — ein Überblick über das, was gerade bei Voices of Creation entsteht.
+              </p>
+              <a class="link" href="#shows" data-i18n="cards.open">Öffnen</a>
+            </div>
+          </article>
+
+          <article class="card card--sponsoring" id="sponsoring">
+            <a class="card__media" href="sponsoring.html">
+              <img
+                src="assets/card-programs.jpg"
+                alt="Designprojekte – Vorschau"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </a>
+
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.sponsoring.tag">Designprojekte</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.sponsoring.meta">Fashion</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.sponsoring.meta2">Kollaborationen</span>
+              </div>
+
+              <p class="kicker" style="margin:0 0 4px;font-size:.8rem;opacity:.7;">Berlin Fashion Week AW27</p>
+              <h3 class="card__title" data-i18n="cards.sponsoring.title">RADIOACTIVITY</h3>
+
+              <p class="card__text" data-i18n="cards.sponsoring.text">
+                „RADIOACTIVITY“ von Sven Appelt verbindet Fashion, Kunst und Zeitgeschichte zu einer multidisziplinären Inszenierung. Zwischen Hiroshima, Tschernobyl, Fukushima und dem New York der 1980er-Jahre beschäftigt sich das Projekt mit den unsichtbaren Narben, die politische Entscheidungen, Katastrophen und gesellschaftliche Umbrüche hinterlassen. Im Rahmen der Berlin Fashion Week AW27 wird Mode dabei nicht als reine Kollektion verstanden, sondern als Medium für Erinnerung, Haltung und gesellschaftlichen Diskurs.
+              </p>
+
+              <a class="link" href="sponsoring.html" data-i18n="cards.sponsoring.link">Designprojekt entdecken →</a>
+            </div>
+          </article>
+
+          <article class="card card--exhibitions" id="ausstellungen">
+            <a class="card__media" href="ausstellungen.html">
+              <img
+                src="assets/ausstellung.jpg"
+                alt="Andreas Fux – Ausstellung in Stuttgart"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </a>
+
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag">Ausstellungen</span>
+                <span class="dot">•</span>
+                <span class="meta__text">Kuratiert</span>
+                <span class="dot">•</span>
+                <span class="meta__text">Archive</span>
+              </div>
+
+              <h3 class="card__title">Andreas FUX in Stuttgart</h3>
+
+              <p class="card__text">
+                Im Landesmuseum Baden-Württemberg in Stuttgart wird eine Fotografie unseres Gründungsmitgliedes Andreas Fuchs zu sehen sein. Wir präsentieren künstlerische Positionen, die gesellschaftliche, politische und kulturelle Fragen verhandeln — und bewahren Geschichten, die nicht vergessen werden dürfen.
+              </p>
+
+              <a class="link" href="ausstellungen.html">Ausstellungen entdecken →</a>
+            </div>
+          </article>
+
+          <article class="card" id="shop">
+            <a class="card__media" href="#shop">
+              <img src="assets/card-shop.jpg" alt="" loading="lazy" width="1200" height="800" />
+            </a>
+            <div class="card__body">
+              <div class="meta">
+                <span class="tag" data-i18n="cards.shop.tag">Virtuelle Galerie</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shop.meta">Kunst</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shop.meta2">Austausch</span>
+                <span class="dot">•</span>
+                <span class="meta__text" data-i18n="cards.shop.meta3">Shop</span>
+              </div>
+              <h3 class="card__title" data-i18n="cards.shop.title">Online-Shop / Virtuelle Galerie</h3>
+              <p class="card__text" data-i18n="cards.shop.text">
+                Voices of Creation entwickelt auf vofc.art mehr als einen Online-Shop: eine virtuelle Galerie und internationale Plattform für Kunst, Design und kulturellen Austausch. Geplant ist ein digitaler Melting Pot aus virtuellen Ausstellungen, Künstler:innen, Editionen, Diskussionen, Begegnungen und Handel. Besucher:innen sollen Kunst entdecken, miteinander ins Gespräch kommen, Arbeiten erwerben und neue kreative Positionen kennenlernen. Die virtuelle Galerie soll klassisch über Browser und mobile Geräte ebenso wie immersiv mit VR-Brille zugänglich sein. So entsteht ein digitaler Ort für Ausstellung, Austausch und Begegnung — unabhängig davon, wo sich Künstler:innen und Publikum befinden.
+              </p>
+              <a class="link" href="#shop" data-i18n="cards.shop.link">Galerie entdecken →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid" aria-label="Footer navigation">
+        <div class="footer-brand">
+          <div class="footer-brand__top">
+            <strong>Voices of Creation e.V.</strong>
+            <span class="muted" data-i18n="footer.tagline">Art • Culture • Creation</span>
+          </div>
+
+          <div class="social">
+            <!-- placeholders -->
+            <a href="https://instagram.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer" aria-label="Instagram (placeholder)">IG</a>
+            <a href="https://tiktok.com/@PLACEHOLDER" target="_blank" rel="noopener noreferrer" aria-label="TikTok (placeholder)">TT</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1">Ausstellungen</h4>
+          <a href="ausstellungen.html" data-i18n="footer.exhibitions">Ausstellungen</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2">Highlights</h4>
+          <a href="#shows" data-i18n="footer.showsHighlights">Highlights</a>
+          <a href="#shows" data-i18n="footer.showsSchedule">Zeitplan</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col3">Designprojekte</h4>
+          <a href="#sponsoring" data-i18n="footer.partners">Partner</a>
+          <a href="#sponsoring" data-i18n="footer.funding">Förderung</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col4">Shop</h4>
+          <a href="#shop" data-i18n="footer.featured">Empfohlene Produkte</a>
+          <a href="#shop" data-i18n="footer.catalog">Ausstellungskataloge</a>
+          <a href="#shop" data-i18n="footer.editions">Editionen</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col5">Kontakt</h4>
+          <a href="#kontakt" data-i18n="footer.contact">Kontakt</a>
+          <a href="mailto:info@vofc.art" data-i18n="footer.email">E-Mail</a>
+        </div>
+      </div>
+
+      <div class="container subfooter" aria-label="Legal">
+        <div class="subfooter__left">
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+          <a href="#" data-i18n="legal.cookies">Cookie-Einstellungen</a>
+        </div>
+
+        <div class="subfooter__right">
+          <span class="muted" data-i18n="legal.copy">
+            © <span id="year"></span> Voices of Creation e.V. — Alle Rechte vorbehalten.
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="drawer" aria-hidden="true">
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <div class="drawer__top">
+          <strong>Menu</strong>
+          <button class="drawer__close" type="button" aria-label="Close menu">✕</button>
+        </div>
+        <nav class="drawer__nav" aria-label="Mobile">
+          <a class="nav-link nav-link--comingsoon" href="ausstellungen.html" data-comingsoon="Coming soon" data-i18n="nav.exhibitions">Ausstellungen</a>
+          <a href="#shows" data-i18n="nav.shows">Highlights</a>
+          <a href="#sponsoring" data-i18n="nav.sponsoring">Designprojekte</a>
+          <a href="#shop" data-i18n="nav.shop">Shop</a>
+          <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+          <a href="login.html">Login</a>
+          <hr />
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+        </nav>
+      </div>
+      <div class="drawer__backdrop" tabindex="-1"></div>
+    </div>
+
+    <script>
+      const I18N = {
+        de: {
+          "nav.shopTop": "Online-Shop",
+          "nav.ticketsTop": "Get Tickets",
+
+          "nav.exhibitions": "Ausstellungen",
+          "nav.shows": "Highlights",
+          "nav.sponsoring": "Designprojekte",
+          "nav.shop": "Shop",
+          "nav.contact": "Kontakt",
+
+          "hero.kicker": "Voices of Creation e.V.",
+          "hero.title": "Plattform für Kunst, Kultur & kreative Zusammenarbeit.",
+          "hero.lead": "Voices of Creation verbindet Künstler:innen, Designer:innen, Musiker:innen und Kulturschaffende. Gemeinsam entwickeln wir Ideen, schaffen Netzwerke und bringen daraus entstehende Projekte in die Öffentlichkeit.",
+          "hero.ctaPrimary": "Entdecken",
+          "hero.ctaSecondary": "Kontakt",
+
+          "mid.comingSoon": "Coming soon",
+          "mid.exhibitions.kicker": "Kategorie",
+          "mid.shows.kicker": "Kategorie",
+          "mid.sponsoring.kicker": "Kategorie",
+          "mid.shop.kicker": "Kategorie",
+          "mid.contact.kicker": "Kategorie",
+
+          "announce.title": "Hinweis",
+          "announce.text": "Diese Seite befindet sich aktuell im Aufbau. Startseite ist live — weitere Inhalte folgen.",
+          "announce.link": "Kontakt",
+
+          "sections.highlights": "Highlights",
+
+          "cards.open": "Öffnen",
+
+          "cards.shows.tag": "Projekte",
+          "cards.shows.meta": "Positionen",
+          "cards.shows.meta2": "Kooperationen",
+          "cards.shows.title": "Aktuelle Highlights",
+          "cards.shows.text": "Ausstellungen, Design-Shows und neue Kooperationen — ein Überblick über das, was gerade bei Voices of Creation entsteht.",
+
+          "cards.sponsoring.tag": "Designprojekte",
+          "cards.sponsoring.meta": "Fashion",
+          "cards.sponsoring.meta2": "Kollaborationen",
+          "cards.sponsoring.title": "RADIOACTIVITY",
+          "cards.sponsoring.text": "„RADIOACTIVITY“ von Sven Appelt verbindet Fashion, Kunst und Zeitgeschichte zu einer multidisziplinären Inszenierung. Zwischen Hiroshima, Tschernobyl, Fukushima und dem New York der 1980er-Jahre beschäftigt sich das Projekt mit den unsichtbaren Narben, die politische Entscheidungen, Katastrophen und gesellschaftliche Umbrüche hinterlassen. Im Rahmen der Berlin Fashion Week AW27 wird Mode dabei nicht als reine Kollektion verstanden, sondern als Medium für Erinnerung, Haltung und gesellschaftlichen Diskurs.",
+          "cards.sponsoring.link": "Designprojekt entdecken →",
+
+          "cards.shop.tag": "Virtuelle Galerie",
+          "cards.shop.meta": "Kunst",
+          "cards.shop.meta2": "Austausch",
+          "cards.shop.meta3": "Shop",
+          "cards.shop.title": "Online-Shop / Virtuelle Galerie",
+          "cards.shop.text": "Voices of Creation entwickelt auf vofc.art mehr als einen Online-Shop: eine virtuelle Galerie und internationale Plattform für Kunst, Design und kulturellen Austausch. Geplant ist ein digitaler Melting Pot aus virtuellen Ausstellungen, Künstler:innen, Editionen, Diskussionen, Begegnungen und Handel. Besucher:innen sollen Kunst entdecken, miteinander ins Gespräch kommen, Arbeiten erwerben und neue kreative Positionen kennenlernen. Die virtuelle Galerie soll klassisch über Browser und mobile Geräte ebenso wie immersiv mit VR-Brille zugänglich sein. So entsteht ein digitaler Ort für Ausstellung, Austausch und Begegnung — unabhängig davon, wo sich Künstler:innen und Publikum befinden.",
+          "cards.shop.link": "Galerie entdecken →",
+
+          "cards.contact.tag": "Kontakt",
+          "cards.contact.meta": "Anfragen & Presse",
+          "cards.contact.title": "Kontakt",
+          "cards.contact.text": "Kooperationen, Sponsoring und Presse — schnelle Wege, klar strukturiert.",
+
+          "about.title": "About Voices of Creation e.V.",
+          "about.text": "Wir verbinden Künstler:innen, Förder:innen und Publikum — mit Projekten, Ausstellungen und digitalen Formaten.",
+          "about.pill1": "Kunst & Kultur",
+          "about.pill2": "Shows",
+          "about.pill3": "Sponsoring",
+
+          "contact.title": "Kontakt",
+          "contact.text": "Für Kooperationen, Sponsoring und Presseanfragen.",
+          "contact.email": "E-Mail:",
+          "contact.web": "Web:",
+
+          "footer.tagline": "Art • Culture • Creation",
+          "footer.col1": "Ausstellungen",
+          "footer.exhibitions": "Ausstellungen",
+          "footer.col2": "Highlights",
+          "footer.showsHighlights": "Highlights",
+          "footer.showsSchedule": "Zeitplan",
+          "footer.col3": "Designprojekte",
+          "footer.partners": "Partner",
+          "footer.funding": "Förderung",
+          "footer.col4": "Shop",
+          "footer.featured": "Empfohlene Produkte",
+          "footer.catalog": "Ausstellungskataloge",
+          "footer.editions": "Editionen",
+          "footer.col5": "Kontakt",
+          "footer.contact": "Kontakt",
+          "footer.email": "E-Mail",
+
+          "legal.imprint": "Impressum",
+          "legal.privacy": "Datenschutz",
+          "legal.cookies": "Cookie-Einstellungen",
+          "legal.copy": "© {{year}} Voices of Creation e.V. — Alle Rechte vorbehalten.",
+        },
+
+        en: {
+          "nav.shopTop": "Online Shop",
+          "nav.ticketsTop": "Get Tickets",
+
+          "nav.exhibitions": "Exhibitions",
+          "nav.shows": "Highlights",
+          "nav.sponsoring": "Design Projects",
+          "nav.shop": "Shop",
+          "nav.contact": "Contact",
+
+          "hero.kicker": "Voices of Creation e.V.",
+          "hero.title": "A platform for contemporary art, culture & creation.",
+          "hero.lead": "Explore exhibitions, shows and partnerships — and contact us directly.",
+          "hero.ctaPrimary": "Explore",
+          "hero.ctaSecondary": "Contact",
+
+          "mid.comingSoon": "Coming soon",
+          "mid.exhibitions.kicker": "Category",
+          "mid.shows.kicker": "Category",
+          "mid.sponsoring.kicker": "Category",
+          "mid.shop.kicker": "Category",
+          "mid.contact.kicker": "Category",
+
+          "announce.title": "Note",
+          "announce.text": "This website is currently under construction. The homepage is live — more content will follow.",
+          "announce.link": "Contact",
+
+          "sections.highlights": "Highlights",
+
+          "cards.open": "Open",
+
+          "cards.shows.tag": "Projects",
+          "cards.shows.meta": "Positions",
+          "cards.shows.meta2": "Collaborations",
+          "cards.shows.title": "Current Highlights",
+          "cards.shows.text": "Exhibitions, design shows and new collaborations — an overview of what's currently happening at Voices of Creation.",
+
+          "cards.sponsoring.tag": "Design Projects",
+          "cards.sponsoring.meta": "Fashion",
+          "cards.sponsoring.meta2": "Collaborations",
+          "cards.sponsoring.title": "RADIOACTIVITY",
+          "cards.sponsoring.text": "\"RADIOACTIVITY\" by Sven Appelt connects fashion, art and contemporary history in a multidisciplinary staging. Set between Hiroshima, Chernobyl, Fukushima and 1980s New York, the project engages with the invisible scars left behind by political decisions, catastrophes and social upheaval. As part of Berlin Fashion Week AW27, fashion is understood here not as a mere collection, but as a medium for memory, stance and public discourse.",
+          "cards.sponsoring.link": "Discover the design project →",
+
+          "cards.shop.tag": "Virtual Gallery",
+          "cards.shop.meta": "Art",
+          "cards.shop.meta2": "Exchange",
+          "cards.shop.meta3": "Shop",
+          "cards.shop.title": "Online Shop / Virtual Gallery",
+          "cards.shop.text": "At vofc.art, Voices of Creation is building more than an online shop: a virtual gallery and international platform for art, design and cultural exchange. The plan is a digital melting pot of virtual exhibitions, artists, editions, discussions, encounters and commerce. Visitors will be able to discover art, connect with one another, acquire works and meet new creative positions. The virtual gallery will be accessible via browser and mobile devices as well as immersively via VR headset — creating a digital space for exhibition, exchange and encounter, regardless of where artists and audiences are located.",
+          "cards.shop.link": "Discover the gallery →",
+
+          "cards.contact.tag": "Contact",
+          "cards.contact.meta": "Inquiries & Press",
+          "cards.contact.title": "Contact",
+          "cards.contact.text": "Collaborations, sponsoring and press — quick ways, clear structure.",
+
+          "about.title": "About Voices of Creation e.V.",
+          "about.text": "We connect artists, supporters and audiences — through projects, exhibitions and digital formats.",
+          "about.pill1": "Art & Culture",
+          "about.pill2": "Shows",
+          "about.pill3": "Sponsoring",
+
+          "contact.title": "Contact",
+          "contact.text": "For collaborations, sponsoring and press inquiries.",
+          "contact.email": "Email:",
+          "contact.web": "Web:",
+
+          "footer.tagline": "Art • Culture • Creation",
+          "footer.col1": "Exhibitions",
+          "footer.exhibitions": "Exhibitions",
+          "footer.col2": "Highlights",
+          "footer.showsHighlights": "Highlights",
+          "footer.showsSchedule": "Schedule",
+          "footer.col3": "Design Projects",
+          "footer.partners": "Partners",
+          "footer.funding": "Funding",
+          "footer.col4": "Shop",
+          "footer.featured": "Featured products",
+          "footer.catalog": "Exhibition catalogs",
+          "footer.editions": "Editions",
+          "footer.col5": "Contact",
+          "footer.contact": "Contact",
+          "footer.email": "Email",
+
+          "legal.imprint": "Imprint",
+          "legal.privacy": "Privacy",
+          "legal.cookies": "Cookie settings",
+          "legal.copy": "© {{year}} Voices of Creation e.V. — All rights reserved.",
+        },
+      };
+
+      function setLangButtons(lang) {
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang") === lang));
+        });
+      }
+
+      function applyI18n(lang) {
+        const dict = I18N[lang] || I18N.de;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          let value = dict[key];
+          if (!value) return;
+          if (key === "legal.copy") value = value.replace("{{year}}", String(new Date().getFullYear()));
+          el.textContent = value;
+        });
+        document.querySelectorAll("[data-comingsoon]").forEach((el) => {
+          el.setAttribute("data-comingsoon", dict["mid.comingSoon"] || "Coming soon");
+        });
+      }
+
+      function updateUrlLang(lang) {
+        const url = new URL(location.href);
+        url.searchParams.set("lang", lang);
+        history.replaceState({}, "", url.toString());
+      }
+
+      function initMenu() {
+        const burger = document.querySelector(".burger");
+        const drawer = document.querySelector(".drawer");
+        const backdrop = document.querySelector(".drawer__backdrop");
+        const closeBtn = document.querySelector(".drawer__close");
+
+        function open() {
+          drawer.classList.add("is-open");
+          drawer.setAttribute("aria-hidden", "false");
+          burger.setAttribute("aria-expanded", "true");
+          document.body.classList.add("no-scroll");
+        }
+        function close() {
+          drawer.classList.remove("is-open");
+          drawer.setAttribute("aria-hidden", "true");
+          burger.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("no-scroll");
+        }
+
+        burger.addEventListener("click", () => (drawer.classList.contains("is-open") ? close() : open()));
+        backdrop.addEventListener("click", close);
+        closeBtn.addEventListener("click", close);
+        drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
+        document.addEventListener("keydown", (e) => e.key === "Escape" && close());
+      }
+
+      function initLangSwitcher() {
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang");
+            localStorage.setItem("vofc_lang", lang);
+            document.documentElement.lang = lang;
+            setLangButtons(lang);
+            applyI18n(lang);
+            updateUrlLang(lang);
+          });
+        });
+      }
+
+      (function init() {
+        const lang = window.__VOFC_LANG__ || "de";
+        setLangButtons(lang);
+        applyI18n(lang);
+        updateUrlLang(lang);
+        const y = document.getElementById("year");
+        if (y) y.textContent = String(new Date().getFullYear());
+        initLangSwitcher();
+        initMenu();
+      })();
+    </script>
+    <div class="modal" id="searchModal" aria-hidden="true">
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Suche">
+        <div class="modal__top">
+          <strong>Suche</strong>
+          <button class="modal__close" type="button" id="closeSearch" aria-label="Suche schließen">✕</button>
+        </div>
+
+        <label class="field">
+          <span class="field__label">Suchbegriff</span>
+          <input class="field__input" id="searchInput" type="search" placeholder="z.B. Shows, Sponsoring, Shop …" />
+        </label>
+
+        <p class="muted" style="margin:10px 0 0;">Platzhalter — echte Suche kann später ergänzt werden.</p>
+      </div>
+      <script>
+        (function () {
+          const modal = document.getElementById("searchModal");
+          const openSearch = document.getElementById("openSearch");
+          const closeSearch = document.getElementById("closeSearch");
+          const closeBackdrop = document.getElementById("closeSearchBackdrop");
+          const input = document.getElementById("searchInput");
+
+          function openModal() {
+            if (!modal) return;
+            modal.setAttribute("aria-hidden", "false");
+            document.documentElement.classList.add("is-locked");
+            setTimeout(() => input?.focus(), 0);
+          }
+
+          function closeModal() {
+            if (!modal) return;
+            modal.setAttribute("aria-hidden", "true");
+            document.documentElement.classList.remove("is-locked");
+          }
+
+          openSearch?.addEventListener("click", openModal);
+          closeSearch?.addEventListener("click", closeModal);
+          closeBackdrop?.addEventListener("click", closeModal);
+
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal?.getAttribute("aria-hidden") === "false") closeModal();
+          });
+        })();
+      </script>
+    <button class="modal__backdrop" type="button" id="closeSearchBackdrop" aria-label="Suche schließen"></button>
+    </body>
+  </div>
+</html>
