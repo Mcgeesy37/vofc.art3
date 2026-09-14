@@ -98,7 +98,7 @@ p{margin:0}
   position:relative;
 }
 .nav-link--comingsoon::before{
-  content:"•";
+  content:"â¢";
   color:rgba(16,17,20,.55);
   margin-right:8px;
 }
@@ -442,42 +442,57 @@ p{margin:0}
   *{scroll-behavior:auto !important;transition:none !important;animation:none !important}
 }
 
-/* ===== Highlights Collage ===== */
+/* ===== Highlights Collage (non-linear) ===== */
 
-#blog .cards > *:nth-child(1){
+/* Make only the Highlights cards collage */
+#blog .cards{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap:16px;
+  align-items:start;
+}
+
+/* Base card behavior */
+#blog .card{
+  transform: translateZ(0);
+}
+
+/* Vary widths + slight offsets => collage feel */
+#blog .card:nth-child(1){
   grid-column: 1 / span 4;
   transform: translateX(6px);
 }
-#blog .cards > *:nth-child(2){
+#blog .card:nth-child(2){
   grid-column: 5 / span 2;
   transform: translateY(10px);
 }
-#blog .cards > *:nth-child(3){
+#blog .card:nth-child(3){
   grid-column: 1 / span 3;
   transform: translateY(14px);
 }
-#blog .cards > *:nth-child(4){
+#blog .card:nth-child(4){
   grid-column: 4 / span 3;
   transform: translateX(-8px);
 }
-
-#blog .card-stack{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
+#blog .card:nth-child(5){
+  grid-column: 2 / span 5;
+  transform: translateY(6px);
 }
 
-#blog .cards > *:nth-child(2) .card__media{ aspect-ratio: 4/5; }
-#blog .cards > *:nth-child(3) .card__media{ aspect-ratio: 3/2; }
-#blog .cards > *:nth-child(4) .card__media{ aspect-ratio: 1/1; }
-.card--interview-inline .card__media{ aspect-ratio: 16/10; }
+/* Different image ratios to avoid âsame sameâ */
+#blog .card:nth-child(1) .card__media{ aspect-ratio: 16/9; }
+#blog .card:nth-child(2) .card__media{ aspect-ratio: 4/5; }
+#blog .card:nth-child(3) .card__media{ aspect-ratio: 3/2; }
+#blog .card:nth-child(4) .card__media{ aspect-ratio: 1/1; }
+#blog .card:nth-child(5) .card__media{ aspect-ratio: 16/10; }
 
+/* Mobile: stack cleanly */
 @media (max-width: 859px){
   #blog .cards{
     grid-template-columns: 1fr;
     gap:16px;
   }
-  #blog .cards > *{
+  #blog .card{
     grid-column:auto !important;
     transform:none !important;
   }
@@ -485,8 +500,7 @@ p{margin:0}
     aspect-ratio: 16/10 !important;
   }
 }
-
-# === PATCH 1: styles.css (unten anfügen) =====================================
+# === PATCH 1: styles.css (unten anfÃ¼gen) =====================================
 
 /* ===== Customer tweaks (Mar 4) ===== */
 
@@ -518,7 +532,7 @@ p{margin:0}
   }
 }
 
-/* 2) Desktop: wider left/right margins (≈ 1.5–2 cm) */
+/* 2) Desktop: wider left/right margins (â 1.5â2 cm) */
 .container{
   /* keep your current max-width if you have one; this only affects padding */
   padding-left: clamp(16px, 2.2vw, 22px);
@@ -527,7 +541,7 @@ p{margin:0}
 
 @media (min-width: 1024px){
   .container{
-    /* ~1.5–2 cm (57–76px) on typical desktop */
+    /* ~1.5â2 cm (57â76px) on typical desktop */
     padding-left: clamp(56px, 5vw, 80px);
     padding-right: clamp(56px, 5vw, 80px);
   }
@@ -584,7 +598,7 @@ p{margin:0}
 # Optional: If your header overlaps anchors, keep this (only if needed)
 .anchor{ position: relative; top: -90px; }
 
-/* Utility bar (Newsletter · Search · Menu) */
+/* Utility bar (Newsletter Â· Search Â· Menu) */
 .utility {
   position: sticky;
   top: 0;
@@ -746,7 +760,7 @@ p{margin:0}
   gap: 12px;
 }
 
-/* Desktop: Hero-Bild soll über volle Desktopbreite innerhalb Container gehen */
+/* Desktop: Hero-Bild soll Ã¼ber volle Desktopbreite innerhalb Container gehen */
 @media (min-width: 860px){
   .hero--banner{
     padding: 10px 20px 0 20px; /* white side margin bleibt wegen container */
@@ -755,7 +769,7 @@ p{margin:0}
     min-height: 420px;
   }
   .hero-copy{
-    max-width: 760px; /* schöner editorial Block */
+    max-width: 760px; /* schÃ¶ner editorial Block */
   }
 }
 
@@ -868,7 +882,7 @@ html, body, button, a{
   box-shadow: none !important;
 }
 
-/* Falls der Schatten am Button selbst hängt */
+/* Falls der Schatten am Button selbst hÃ¤ngt */
 .utility .icon-btn,
 #openSearch{
   box-shadow: none !important;
@@ -973,13 +987,13 @@ button:focus{ outline: none; }
   appearance: none !important;
   -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 
-  /* Optional spacing (falls du’s brauchst) */
+  /* Optional spacing (falls duâs brauchst) */
   width: 38px;
   height: 38px;
   border-radius: 999px;
 }
 
-/* SVG selbst komplett “clean” */
+/* SVG selbst komplett âcleanâ */
 #openSearch svg,
 #openSearch svg *{
   box-shadow: none !important;
@@ -1006,7 +1020,7 @@ svg{
   object-position: 50% 0%;
 }
 
-/* Sponsoring-Bild oben „ankleben“ (wie gewünscht) */
+/* Sponsoring-Bild oben âanklebenâ (wie gewÃ¼nscht) */
 .card--sponsoring .card__media img{
   object-position: top center;
 }
@@ -1072,4 +1086,3 @@ svg{
   font-size: 14px;
   color: var(--muted);
 }
-
