@@ -1087,39 +1087,3 @@ svg{
   color: var(--muted);
 }
 
-/* ===== Highlights Collage (dynamisch, füllt Lücken automatisch) ===== */
-
-#blog .cards{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-auto-flow: dense;
-  gap:16px;
-  align-items:start;
-}
-
-#blog .card{
-  transform: none !important;
-}
-
-/* Optische Varianz: jede 3. Karte etwas breiter, ohne feste Kartenanzahl vorauszusetzen */
-#blog .card:nth-child(3n+1){
-  grid-column: span 2;
-}
-
-/* Bild-Seitenverhältnisse abwechslungsreich, aber nicht positionsabhängig */
-#blog .card:nth-child(odd) .card__media{ aspect-ratio: 16/10; }
-#blog .card:nth-child(even) .card__media{ aspect-ratio: 4/5; }
-
-/* Mobile: sauber stapeln */
-@media (max-width: 859px){
-  #blog .cards{
-    grid-template-columns: 1fr;
-    gap:16px;
-  }
-  #blog .card{
-    grid-column: auto !important;
-  }
-  #blog .card .card__media{
-    aspect-ratio: 16/10 !important;
-  }
-}
