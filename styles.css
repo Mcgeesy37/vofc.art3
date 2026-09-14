@@ -442,57 +442,42 @@ p{margin:0}
   *{scroll-behavior:auto !important;transition:none !important;animation:none !important}
 }
 
-/* ===== Highlights Collage (non-linear) ===== */
+/* ===== Highlights Collage ===== */
 
-/* Make only the Highlights cards collage */
-#blog .cards{
-  display:grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap:16px;
-  align-items:start;
-}
-
-/* Base card behavior */
-#blog .card{
-  transform: translateZ(0);
-}
-
-/* Vary widths + slight offsets => collage feel */
-#blog .card:nth-child(1){
+#blog .cards > *:nth-child(1){
   grid-column: 1 / span 4;
   transform: translateX(6px);
 }
-#blog .card:nth-child(2){
+#blog .cards > *:nth-child(2){
   grid-column: 5 / span 2;
   transform: translateY(10px);
 }
-#blog .card:nth-child(3){
+#blog .cards > *:nth-child(3){
   grid-column: 1 / span 3;
   transform: translateY(14px);
 }
-#blog .card:nth-child(4){
+#blog .cards > *:nth-child(4){
   grid-column: 4 / span 3;
   transform: translateX(-8px);
 }
-#blog .card:nth-child(5){
-  grid-column: 2 / span 5;
-  transform: translateY(6px);
+
+#blog .card-stack{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
 }
 
-/* Different image ratios to avoid “same same” */
-#blog .card:nth-child(1) .card__media{ aspect-ratio: 16/9; }
-#blog .card:nth-child(2) .card__media{ aspect-ratio: 4/5; }
-#blog .card:nth-child(3) .card__media{ aspect-ratio: 3/2; }
-#blog .card:nth-child(4) .card__media{ aspect-ratio: 1/1; }
-#blog .card:nth-child(5) .card__media{ aspect-ratio: 16/10; }
+#blog .cards > *:nth-child(2) .card__media{ aspect-ratio: 4/5; }
+#blog .cards > *:nth-child(3) .card__media{ aspect-ratio: 3/2; }
+#blog .cards > *:nth-child(4) .card__media{ aspect-ratio: 1/1; }
+.card--interview-inline .card__media{ aspect-ratio: 16/10; }
 
-/* Mobile: stack cleanly */
 @media (max-width: 859px){
   #blog .cards{
     grid-template-columns: 1fr;
     gap:16px;
   }
-  #blog .card{
+  #blog .cards > *{
     grid-column:auto !important;
     transform:none !important;
   }
@@ -500,6 +485,7 @@ p{margin:0}
     aspect-ratio: 16/10 !important;
   }
 }
+
 # === PATCH 1: styles.css (unten anfügen) =====================================
 
 /* ===== Customer tweaks (Mar 4) ===== */
