@@ -1,0 +1,842 @@
+<!--
+File: /interview.html
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>das interview bei VOFC.art — Voices of Creation e.V.</title>
+    <meta
+      name="description"
+      content="das interview bei VOFC.art — die Gesprächsreihe von Voices of Creation e.V. Menschen. Ideen. Haltung. Und die Fragen dazwischen."
+    />
+
+    <meta property="og:title" content="das interview bei VOFC.art" />
+    <meta property="og:description" content="Menschen. Ideen. Haltung. Und die Fragen dazwischen." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.vofc.art/interview.html" />
+    <meta property="og:image" content="assets/og.jpg" />
+
+    <link rel="manifest" href="app.json" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      (function () {
+        const params = new URLSearchParams(location.search);
+        const fromQuery = params.get("lang");
+        const fromStorage = localStorage.getItem("vofc_lang");
+        const lang = (fromQuery || fromStorage || "de").toLowerCase();
+
+        if (lang !== "de" && lang !== "en") return;
+        localStorage.setItem("vofc_lang", lang);
+        document.documentElement.lang = lang;
+        window.__VOFC_LANG__ = lang;
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <!-- Utility bar: Newsletter – Search – Menu -->
+    <div class="utility">
+      <div class="container utility__inner">
+        <a class="utility__link" href="#newsletter">Newsletter</a>
+
+        <button class="icon-btn" type="button" id="openSearch" aria-label="Suche öffnen">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10.5 3a7.5 7.5 0 1 1 4.6 13.4l4.2 4.2-1.4 1.4-4.2-4.2A7.5 7.5 0 0 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn" type="button" id="openMenu" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 7h16v2H4V7Zm0 6h16v2H4v-2Zm0 6h16v2H4v-2Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="./" aria-label="Voices of Creation e.V. Home">
+          <img
+            class="brand__mark"
+            src="assets/logo.png"
+            alt="Voices of Creation Logo"
+            width="220"
+            height="72"
+            loading="eager"
+          />
+        </a>
+
+        <nav class="header-nav" aria-label="Primary">
+          <a
+            class="nav-link nav-link--comingsoon"
+            href="ausstellungen.html"
+            data-i18n="nav.exhibitions"
+            data-comingsoon="Coming soon"
+            >Ausstellungen</a
+          >
+          <a class="nav-link" href="index.html#shows" data-i18n="nav.shows">Highlights</a>
+          <a class="nav-link" href="sponsoring.html" data-i18n="nav.sponsoring">Designprojekte</a>
+          <a class="nav-link" href="index.html#shop" data-i18n="nav.shop">Shop</a>
+          <a class="nav-link" href="index.html#kontakt" data-i18n="nav.contact">Kontakt</a>
+          <a class="nav-link nav-link--login" href="login.html">Login</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn" type="button" data-lang="de" aria-pressed="true">DE</button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="burger" type="button" id="openMenu" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ================= INTRO / ÜBER DIE REIHE ================= -->
+      <section class="section container" aria-label="das interview bei VOFC.art">
+        <div class="section-head">
+          <p class="kicker">das interview bei VOFC.art</p>
+          <h1>Menschen. Ideen. Haltung. Und die Fragen dazwischen.</h1>
+        </div>
+
+        <div class="interview-copy">
+          <p>
+            das interview bei VOFC.art ist die Gesprächsreihe von Voices of Creation e.V. Wir sprechen mit Menschen, die gestalten, verändern, widersprechen, erinnern und Neues entstehen lassen – aus Kunst, Kultur, Mode, Musik, Bildung, Politik und Gesellschaft.
+          </p>
+          <p>
+            Den Anfang machen die Gründungsmitglieder von Voices of Creation. Doch dabei soll es nicht bleiben. Künstler:innen treffen auf Studierende, etablierte Positionen auf eine neue Generation, Kulturschaffende auf politische Entscheidungsträger:innen und Menschen mit jahrzehntelanger Erfahrung auf diejenigen, die gerade erst beginnen.
+          </p>
+          <p>
+            Uns interessieren dabei nicht nur Lebensläufe, Erfolge und fertige Projekte. Uns interessiert, was dahinter passiert: Warum macht jemand Kunst? Was bedeutet Erfolg? Wie viel Ego braucht Kreativität? Was passiert, wenn Geld fehlt? Wer entscheidet, welche Kunst sichtbar wird? Welche Verantwortung trägt Politik für kulturelle Freiräume? Und warum entstehen manche der wichtigsten Ideen genau dort, wo zunächst niemand an sie glaubt?
+          </p>
+          <p>
+            Die Gespräche dürfen persönlich, unbequem, überraschend und auch widersprüchlich sein. Es gibt keine vorgeschriebene Haltung und keinen perfekten Lebenslauf. Wir wollen Menschen kennenlernen – mit ihren Ideen, Erfahrungen, Fehlern, Zweifeln und Überzeugungen.
+          </p>
+          <p>
+            Denn Kultur entsteht nicht nur auf Bühnen, in Museen oder Galerien. Sie entsteht im Gespräch. Im Widerspruch. In Begegnungen zwischen Menschen, die möglicherweise vollkommen unterschiedlich denken und trotzdem etwas voneinander lernen können.
+          </p>
+          <p>das interview bei VOFC.art möchte genau dafür einen Raum schaffen.</p>
+          <p><strong>Nicht nur fragen, was jemand macht.<br />Sondern warum.</strong></p>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ================= INTERVIEW #01 — SVEN APPELT ================= -->
+      <section class="section container" aria-label="das interview #01 — Sven Appelt">
+        <div class="section-head">
+          <p class="kicker">das interview #01</p>
+          <h2>Sven Appelt</h2>
+          <p class="lead">
+            „Wenn wir Kultur kaputtsparen, müssen wir uns nicht wundern, wenn Berlin irgendwann nichts mehr zu erzählen hat.“
+          </p>
+        </div>
+
+        <div class="interview-copy">
+          <p>
+            Für die erste Ausgabe von das interview bei VOFC.art beginnen wir dort, wo auch Voices of Creation beginnt: bei einem seiner Gründer.
+          </p>
+          <p>
+            Sven Appelt ist Modedesigner und Creative Director – und jemand, der nach vielen Jahren in der Kreativbranche immer weniger daran glaubt, dass gute Kunst zwangsläufig allein entstehen muss.
+          </p>
+          <p>
+            Mit 45 blickt Appelt auf eine Branche, die er liebt und gleichzeitig ausgesprochen kritisch betrachtet. Er spricht über Talent und Ego, über Geld und Sichtbarkeit, über Narzissmus und Macht – und darüber, warum Kreative seiner Meinung nach viel zu häufig nebeneinander arbeiten, obwohl sie gemeinsam wesentlich mehr erreichen könnten.
+          </p>
+          <p>
+            Genau aus diesem Gedanken entstand Voices of Creation: Was passiert, wenn ein Designer nicht nur einen Fotografen sucht, sondern beide Teil desselben Netzwerks sind? Wenn Künstler:innen, Musiker:innen, Studierende, Veranstalter:innen und Kulturschaffende ihre Fähigkeiten miteinander verbinden? Und wenn eine Idee nicht zuerst danach beurteilt wird, wie viel Geld sie einbringt, sondern danach, ob sie es wert ist, umgesetzt zu werden?
+          </p>
+          <p>Doch das Gespräch wird politisch.</p>
+          <p>
+            Appelt spricht über Berlin, über Subkultur und darüber, warum die Stadt seiner Ansicht nach Gefahr läuft, genau jene kreativen Strukturen zu schwächen, denen sie einen wesentlichen Teil ihrer internationalen Identität verdankt. Er kritisiert die Berliner Kulturpolitik, spricht über Förderstrukturen und fragt, warum kleinere Künstler:innen und kulturelle Zeitzeug:innen teilweise um Sichtbarkeit kämpfen müssen, während gleichzeitig gerne mit Berlins Ruf als Kulturmetropole geworben wird.
+          </p>
+          <p>
+            Und er spricht über das, was als Nächstes kommt: WILD ROSE, kreativen Protest und #unkürzbar, über die Zusammenarbeit verschiedener Generationen sowie über RADIOACTIVITY – eine Modenschau über Macht, Energie, Narzissmus und unsichtbare Gefahren.
+          </p>
+          <p>
+            Das erste Gespräch dieser Reihe ist deshalb keine klassische Vorstellung eines Vereinsvorsitzenden.
+          </p>
+          <p>Es ist ein Gespräch darüber, warum dieser Verein überhaupt notwendig sein soll.</p>
+          <p>Und über eine ziemlich einfache Überzeugung:</p>
+          <p>
+            <strong>Wenn Menschen gemeinsam etwas schaffen können, sollten wir ihnen nicht erklären, warum es schwierig ist. Wir sollten herausfinden, wie es möglich wird.</strong>
+          </p>
+        </div>
+
+        <div class="interview-copy">
+          <p class="lead">
+            Sven Appelt:<br />
+            „Wenn wir Kultur kaputtsparen, müssen wir uns nicht wundern, wenn Berlin irgendwann nichts mehr zu erzählen hat.“
+          </p>
+
+          <div class="qa">
+            <p><strong>DAS INTERVIEW:</strong> Wie hat das alles mit dir angefangen?</p>
+            <p><strong>APPELT:</strong> Mit der Erkenntnis, dass ich für einen normalen Beruf wahrscheinlich völlig ungeeignet bin. Ich wollte gestalten. Kleidung, Bilder, Räume, Geschichten. Hauptsache nicht langweilig.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Wann wusstest du, dass du Modedesigner werden willst?</p>
+            <p><strong>APPELT:</strong> Ziemlich früh. Ob das eine vernünftige Entscheidung war? Wahrscheinlich nicht. Aber die vernünftigen Entscheidungen waren selten meine besten.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Du bist 45. Siehst du die Kreativbranche heute anders als mit 25?</p>
+            <p><strong>APPELT:</strong> Komplett. Mit 25 glaubst du, Talent reicht. Mit 45 weißt du: Talent öffnet vielleicht die Tür. Durchgehen musst du selbst. Und manchmal musst du die Tür vorher noch finden.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Was braucht es dann?</p>
+            <p><strong>APPELT:</strong> Durchhaltevermögen. Organisation. Geld. Kontakte. Und die Bereitschaft, nach dem zehnten Nein ein elftes Mal anzurufen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Was bedeutet Erfolg für dich heute?</p>
+            <p><strong>APPELT:</strong> Etwas umzusetzen, von dem vorher alle gesagt haben: Das geht nicht.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Nicht Geld? Nicht Bekanntheit?</p>
+            <p><strong>APPELT:</strong> Beides macht das Leben angenehmer. Aber beides macht noch keine gute Arbeit.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Braucht Kunst Ego?</p>
+            <p><strong>APPELT:</strong> Natürlich. Ohne Ego stellst du dich nicht hin und sagst: Schaut euch an, was ich gemacht habe.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und wann wird Ego zum Problem?</p>
+            <p><strong>APPELT:</strong> Wenn der Künstler interessanter sein möchte als seine Kunst.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Du beschäftigst dich auffällig oft mit Narzissmus.</p>
+            <p><strong>APPELT:</strong> Weil Menschen wahnsinnig interessant werden, sobald sie Macht bekommen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Interessant oder gefährlich?</p>
+            <p><strong>APPELT:</strong> Beides liegt manchmal erschreckend nah beieinander.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Muss Kunst politisch sein?</p>
+            <p><strong>APPELT:</strong> Nein. Aber politische Kunst muss sich auch nicht dafür entschuldigen, politisch zu sein.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Darf Mode einfach schön sein?</p>
+            <p><strong>APPELT:</strong> Natürlich. Ich liebe schöne Kleidung. Aber wenn ich mit einem Kleid zusätzlich eine Geschichte erzählen kann, wäre ich doch bescheuert, darauf zu verzichten.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Wann wird Mode für dich Kunst?</p>
+            <p><strong>APPELT:</strong> Wenn ich aufhöre darüber nachzudenken, ob jemand das Kleid Montagmorgen im Büro tragen kann.</p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <p class="lead">„Warum sitzen fünf Menschen mit fünf Fähigkeiten nebeneinander und kämpfen trotzdem jeder allein?“</p>
+
+          <div class="qa">
+            <p><strong>DAS INTERVIEW:</strong> Warum habt ihr Voices of Creation gegründet?</p>
+            <p><strong>APPELT:</strong> Weil mich irgendwann diese absurde Situation genervt hat: Einer hat eine fantastische Idee, aber kein Geld. Der andere kann fotografieren. Jemand kennt eine Location. Einer kann Presse. Jemand anderes kennt Fördermöglichkeiten. Und alle sitzen fünf Meter voneinander entfernt und kämpfen allein. Warum?</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Also kreative Selbsthilfe?</p>
+            <p><strong>APPELT:</strong> Klingt schrecklich. Aber ja. Nur hoffentlich mit besseren Klamotten.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Warum ein Verein und keine Agentur?</p>
+            <p><strong>APPELT:</strong> Weil eine gute Idee nicht zuerst beantworten sollte, wie viel Geld man mit ihr verdienen kann.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Geld ist euch egal?</p>
+            <p><strong>APPELT:</strong> Überhaupt nicht. Kunst kostet Geld. Das romantische Bild vom Künstler, der von Luft und Inspiration lebt, können wir langsam beerdigen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Wie funktioniert Voices of Creation konkret?</p>
+            <p><strong>APPELT:</strong> Einer kommt mit einer Idee. Dann schauen wir: Was fehlt? Fotografie? Musik? Presse? Produktion? Raum? Geld? Kontakte? Und dann versuchen wir, diese Menschen und Möglichkeiten zusammenzubringen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und plötzlich entsteht ein Projekt?</p>
+            <p><strong>APPELT:</strong> Hoffentlich. Manchmal entsteht auch erstmal Chaos. Kreative Menschen eben.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Ist so ein Netzwerk heute notwendiger als früher?</p>
+            <p><strong>APPELT:</strong> Ich glaube schon. Besonders kleinere Künstler kämpfen inzwischen teilweise nicht mehr um Erfolg. Sie kämpfen erstmal darum, überhaupt sichtbar zu bleiben.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Warum?</p>
+            <p><strong>APPELT:</strong> Weil Geld und Aufmerksamkeit eine bemerkenswerte Eigenschaft haben: Sie gehen wahnsinnig gerne dorthin, wo schon Geld und Aufmerksamkeit sind.</p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <p class="lead">„Berlin wurde nicht weltberühmt, weil hier alles ordentlich war.“</p>
+
+          <div class="qa">
+            <p><strong>DAS INTERVIEW:</strong> Große Institutionen gegen kleine Kultur?</p>
+            <p><strong>APPELT:</strong> Nein. Dieser Gegensatz wäre mir zu billig. Wir brauchen Museen, Opernhäuser, Theater, Festivals und große Institutionen. Aber wir brauchen genauso den Typen mit seinem Atelier, den kleinen Club, die freie Galerie und fünf vollkommen Verrückte, die in einem Hinterhof etwas ausprobieren, von dem noch niemand weiß, ob es funktioniert.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Ist das Berlin?</p>
+            <p><strong>APPELT:</strong> Für mich schon. Berlin wurde nicht weltberühmt, weil hier alles ordentlich war.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Sondern?</p>
+            <p><strong>APPELT:</strong> Weil hier Dinge möglich waren, die anderswo unmöglich erschienen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und genau das siehst du gefährdet?</p>
+            <p><strong>APPELT:</strong> Ja. Wenn eine Stadt ihre kleinen kulturellen Strukturen verliert, merkt sie das nicht unbedingt morgen. Vielleicht auch nicht nächstes Jahr. Aber irgendwann fragt sie sich, warum alles plötzlich so austauschbar geworden ist.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Du kritisierst die Berliner Kulturpolitik ziemlich deutlich.</p>
+            <p><strong>APPELT:</strong> Ja. Kultur wird mir bei Haushaltsproblemen zu schnell behandelt wie Tischdekoration. Schön, wenn Geld da ist. Kann weg, wenn es knapp wird.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Kultur ist keine Tischdekoration?</p>
+            <p><strong>APPELT:</strong> Für Berlin ganz sicher nicht.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Was ist sie?</p>
+            <p><strong>APPELT:</strong> Ein Teil des Geschäftsmodells dieser Stadt.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Das klingt erstaunlich wirtschaftlich.</p>
+            <p><strong>APPELT:</strong> Ist es auch. Menschen kommen nach Berlin wegen Geschichte, Musik, Clubs, Kunst, Mode, Freiheit, Subkultur. Kultur ist nicht nur etwas, das Geld kostet. Sie erzeugt Aufmerksamkeit, Identität und Wirtschaft.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Touristen kommen also nicht wegen des Roten Rathauses?</p>
+            <p><strong>APPELT:</strong> Einige bestimmt. Aber niemand sitzt in New York und denkt: Schatz, dieses Jahr müssen wir unbedingt die Berliner Baustellen sehen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Was suchen die Menschen dann?</p>
+            <p><strong>APPELT:</strong> Dieses Berlin-Gefühl. Freiheit. Clubs. Kunst. Musik. Mode. Geschichte. Verrückte Menschen. Die Möglichkeit, dass Dienstagabend etwas passieren kann, was eigentlich überhaupt nicht geplant war.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und genau deshalb machen dich Kürzungen wütend?</p>
+            <p><strong>APPELT:</strong> Mich macht die Haltung dahinter wütend. Wenn Kultur funktioniert, steht jeder Politiker gerne daneben. Wenn das Geld knapp wird, soll der Künstler plötzlich erklären, warum seine Existenz notwendig ist.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Kai Wegner trägt für dich politische Verantwortung?</p>
+            <p><strong>APPELT:</strong> Natürlich trägt ein Regierender Bürgermeister Verantwortung für die Politik seiner Regierung. Und ich glaube, dass wir über die kulturpolitischen Entscheidungen dieser Jahre noch lange sprechen werden.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Berlin wählt 2026 neu. Freust du dich darauf?</p>
+            <p><strong>APPELT:</strong> Sehr. Demokratie hat etwas ausgesprochen Praktisches: Irgendwann müssen Politiker wieder die Menschen fragen, ob sie ihren Job behalten dürfen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Würdest du dir eine Regierende Bürgermeisterin wünschen?</p>
+            <p><strong>APPELT:</strong> Ich wünsche mir erstmal jemanden, der versteht, dass Kultur kein Luxusartikel ist. Wenn das eine Frau ist: großartig. Aber eine Frau kann genauso schlechte Kulturpolitik machen wie ein Mann. So emanzipiert sollten wir schon sein.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Was müsste sich ändern?</p>
+            <p><strong>APPELT:</strong> Weniger Sonntagsreden darüber, wie wichtig Kreative für Berlin sind. Mehr Möglichkeiten, tatsächlich hier arbeiten zu können.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Konkret?</p>
+            <p><strong>APPELT:</strong> Räume. Förderung. Planungssicherheit. Niedrigere Hürden. Und vielleicht nicht für einen Förderantrag mehr Energie verbrauchen als für die Ausstellung selbst.</p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <p class="lead">„Ein Zeitzeuge ist kein Wikipedia-Eintrag.“</p>
+
+          <div class="qa">
+            <p><strong>DAS INTERVIEW:</strong> Voices of Creation möchte besonders kleinere künstlerische Positionen unterstützen?</p>
+            <p><strong>APPELT:</strong> Ja. Und ausdrücklich nicht nur junge.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Warum ist dir das wichtig?</p>
+            <p><strong>APPELT:</strong> Weil wir ständig über Nachwuchsförderung sprechen und manchmal vergessen, dass neben uns Menschen leben, die kulturelle Geschichte selbst erlebt haben.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Andreas Fux zum Beispiel?</p>
+            <p><strong>APPELT:</strong> Genau. Da existiert ein Werk seit Jahrzehnten. Plötzlich schaut eine neue Generation darauf und erkennt: Moment mal, das ist nicht nur Fotografie. Das ist Zeitgeschichte.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und trotzdem müssen solche Künstler um Ausstellungen kämpfen?</p>
+            <p><strong>APPELT:</strong> Genau das ist doch das Verrückte.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Warum braucht es diese Menschen?</p>
+            <p><strong>APPELT:</strong> Weil sie irgendwann nicht mehr da sind.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Hart formuliert.</p>
+            <p><strong>APPELT:</strong> Aber wahr. Ein Zeitzeuge ist kein Wikipedia-Eintrag. Du kannst einen Menschen fragen: Wie hat sich das angefühlt? Wovor hattest du Angst? Was hast du gesehen? Warum hast du dieses Foto gemacht? Irgendwann kann niemand diese Fragen mehr beantworten.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und was kann Voices of Creation daran ändern?</p>
+            <p><strong>APPELT:</strong> Wir können keine Kulturpolitik ersetzen. Das wäre auch größenwahnsinnig. Aber wir können Menschen verbinden, Ausstellungen mitentwickeln, Öffentlichkeit schaffen, Partner suchen und verhindern, dass eine gute Idee daran stirbt, dass jemand die richtige Telefonnummer nicht kennt.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und die 20-Jährigen?</p>
+            <p><strong>APPELT:</strong> Setzen wir daneben.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Einfach so?</p>
+            <p><strong>APPELT:</strong> Unbedingt. Der 70-Jährige weiß Dinge, die der 20-Jährige nicht wissen kann. Der 20-Jährige sieht Dinge, für die der 70-Jährige vielleicht längst betriebsblind ist. Perfekt. Jetzt sollen die beiden miteinander reden.</p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <p class="lead">„Demonstrieren muss nicht immer ein Pappschild im Regen bedeuten.“</p>
+
+          <div class="qa">
+            <p><strong>DAS INTERVIEW:</strong> Ist das der Gedanke hinter WILD ROSE?</p>
+            <p><strong>APPELT:</strong> Genau. Studierende, Künstler, Freunde, unterschiedliche Gewerke. Gemeinsam entsteht etwas, das keiner von uns allein genauso machen würde.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und gleichzeitig ist es Protest?</p>
+            <p><strong>APPELT:</strong> Ja. Kultur und Bildung sind #unkürzbar.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Warum eine Modedemonstration?</p>
+            <p><strong>APPELT:</strong> Weil Demonstrieren nicht immer bedeuten muss, mit einem Pappschild im Regen zu stehen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Sondern?</p>
+            <p><strong>APPELT:</strong> Wir können Kleidung entwerfen. Musik machen. Bilder erzeugen. Menschen überraschen. Wir sind Kreative. Dann dürfen wir bitte auch kreativ protestieren.</p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <p class="lead">„RADIOACTIVITY wird unangenehmer.“</p>
+
+          <div class="qa">
+            <p><strong>DAS INTERVIEW:</strong> Und RADIOACTIVITY?</p>
+            <p><strong>APPELT:</strong> Das wird unangenehmer.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Warum?</p>
+            <p><strong>APPELT:</strong> Weil es um uns geht.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Hiroshima, Fukushima und die AIDS-Pandemie – das klingt zunächst überhaupt nicht nach „uns“.</p>
+            <p><strong>APPELT:</strong> Genau deshalb.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Erklär das.</p>
+            <p><strong>APPELT:</strong> Drei vollkommen unterschiedliche Ereignisse. Unterschiedliche Ursachen, unterschiedliche Opfer, unterschiedliche historische Zusammenhänge. Ich setze sie ausdrücklich nicht gleich. Mich interessiert etwas anderes: das Unsichtbare.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Was ist unsichtbar?</p>
+            <p><strong>APPELT:</strong> Radioaktivität. Ein Virus. Macht. Angst. Größenwahn. Viele der gefährlichsten Dinge besitzen keine sichtbare Form.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Und daraus machst du Kleidung?</p>
+            <p><strong>APPELT:</strong> Genau das ist die Herausforderung.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Also wieder Narzissmus?</p>
+            <p><strong>APPELT:</strong> Immer wieder.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Warum?</p>
+            <p><strong>APPELT:</strong> Weil der Mensch erstaunlich überzeugt davon ist, alles kontrollieren zu können. Selbst nachdem ihm die Geschichte mehrfach das Gegenteil bewiesen hat.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Hat der Mensch nichts gelernt?</p>
+            <p><strong>APPELT:</strong> Doch. Und manchmal habe ich das Gefühl, er benutzt sein neu erworbenes Wissen hauptsächlich dazu, denselben Fehler technisch anspruchsvoller zu wiederholen.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Das ist ziemlich pessimistisch.</p>
+            <p><strong>APPELT:</strong> Nein. Sonst hätte ich keinen Verein gegründet.</p>
+
+            <p><strong>DAS INTERVIEW:</strong> Was bist du dann?</p>
+            <p><strong>APPELT:</strong> Naiv genug zu glauben, dass man Dinge verändern kann. Und alt genug zu wissen, dass man dafür verdammt viel arbeiten muss.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ================= ANDREAS FUX ARTIKEL ================= -->
+      <section class="section container" aria-label="Andreas Fux in Stuttgart">
+        <div class="section-head">
+          <p class="kicker">Andreas Fux in Stuttgart</p>
+          <h2>Wenn ein Bild bleibt</h2>
+        </div>
+
+        <div class="interview-copy">
+          <p>
+            Manchmal beginnt die Geschichte eines Museumsobjekts nicht im Museum. Nicht mit einer Sammlung, einem Ausstellungskonzept oder einem kuratorischen Text. Sondern in einem Gästezimmer in Berlin.
+          </p>
+          <p>
+            Eine Fotografie unseres Gründungsmitglieds Andreas Fux soll künftig im Kontext des Landesmuseums Württemberg in Stuttgart zu sehen sein. Für Fux verbindet sich mit diesem Bild eine sehr persönliche Erinnerung: Nach seiner Schilderung hing die Fotografie einst in dem Berliner Gästezimmer, in dem die heutige Kuratorin während ihrer Zeit in der Stadt untergebracht war. Sie lebte mit diesem Bild – Tag für Tag, Nacht für Nacht.
+          </p>
+          <p>Was zunächst beinahe beiläufig klingt, besitzt für einen Fotografen eine besondere Bedeutung.</p>
+          <p>
+            Denn ein Werk im Museum betrachtet man für Minuten. Ein Bild im eigenen Lebensraum begleitet einen über Wochen, Monate oder Jahre. Man kann ihm nicht ausweichen. Man sieht es morgens, geht daran vorbei, lebt damit – und irgendwann wird es Teil der eigenen Erinnerung.
+          </p>
+          <p>
+            Für Andreas Fux ist genau das eines der größten Komplimente, das seiner fotografischen Arbeit gemacht werden kann: Ein Bild wurde nicht nur betrachtet. Mit ihm wurde gelebt.
+          </p>
+          <p>Jahre später führt die Geschichte dieses Werkes nach Stuttgart.</p>
+
+          <h3>Vom Ost-Berliner Straßenbild zum Museum</h3>
+          <p>Dass Fotografien von Andreas Fux heute institutionell neu betrachtet werden, ist Teil einer größeren Entwicklung.</p>
+          <p>
+            Fux fotografierte bereits als junger Mann Menschen und Straßenszenen im Ost-Berlin der 1980er-Jahre. Gegenüber dem rbb beschreibt er seine damalige Arbeitsweise als unmittelbar und spontan: Er ließ sich durch die Stadt treiben, beobachtete Menschen und folgte mit seiner Kamera Situationen, die ihn interessierten. Eine klassische staatliche oder politische Auftragsfotografie war das gerade nicht.
+          </p>
+          <p>Genau diese Bilder sind heute historische Dokumente einer Zeit, obwohl sie ursprünglich nicht mit diesem Anspruch entstanden.</p>
+          <p>
+            2026 rückte sein Werk prominent in die Ausstellung „Queere Kunst in der DDR? Biografien zwischen Underground und Propaganda“. Das Projekt versammelte neun künstlerische Positionen und wurde an vier Berliner Institutionen gezeigt: KVOST, nGbK, Mitte Museum und Werkbundarchiv – Museum der Dinge. Im Mitte Museum wurden Arbeiten von Andreas Fux gemeinsam mit Arbeiten von Jürgen Wittdorf präsentiert.
+          </p>
+          <p>
+            Die Ausstellung stellt dabei eine Frage, die für das Verständnis seines Werkes entscheidend ist: Unter welchen Bedingungen konnten individuelle und queere Lebensrealitäten innerhalb eines Systems sichtbar werden, das von gesellschaftlicher Stigmatisierung, kulturpolitischen Vorgaben und staatlicher Kontrolle geprägt war? Das Mitte Museum beschreibt die Kunstproduktion dieser Zeit ausdrücklich als Spannungsfeld zwischen Sichtbarkeit und Verbergen, Anpassung und Eigensinn.
+          </p>
+          <p>
+            Fux selbst ordnet seine damalige Arbeit wesentlich unmittelbarer ein. Im rbb-Beitrag erklärt er, dass er seine Fotografie damals gar nicht als „schwule Fotografie“ oder Männeraktfotografie kategorisiert habe. Er fotografierte ohne Auftrag und machte Bilder, die zunächst ihm selbst Freude bereiteten.
+          </p>
+          <p>Vielleicht liegt gerade darin ihre heutige Kraft.</p>
+
+          <h3>Fotografien verändern ihre Bedeutung</h3>
+          <p>Ein Bild bleibt nicht zwangsläufig das, was es im Moment seiner Entstehung war.</p>
+          <p>
+            Eine Fotografie kann zunächst eine persönliche Beobachtung sein. Jahrzehnte später wird sie Zeitdokument. Sie kann Teil einer Ausstellung werden, Eingang in eine Publikation finden und plötzlich Fragen über eine Gesellschaft beantworten, die der Fotograf beim Auslösen seiner Kamera möglicherweise überhaupt nicht formuliert hatte.
+          </p>
+          <p>
+            Die aktuelle wissenschaftliche und institutionelle Beschäftigung mit queerer Kunst aus der DDR zeigt zugleich, wie viele dieser Biografien bislang nur unzureichend erforscht wurden. Die begleitende Publikation zur Berliner Ausstellung spricht von einem weitgehend unerforschten Feld zwischen queeren Biografien und künstlerischer Produktion unter den Bedingungen der DDR.
+          </p>
+          <p>Für Voices of Creation liegt darin ein wesentlicher Teil kultureller Arbeit:</p>
+          <p>
+            Kunst nicht nur neu zu produzieren, sondern vorhandene künstlerische Positionen sichtbar zu halten, ihre Geschichten zu bewahren und sie einer neuen Generation zugänglich zu machen.
+          </p>
+          <p>Und manchmal führt dieser Weg auf erstaunliche Weise zurück zu einem einzelnen Bild.</p>
+          <p>
+            Von Berlin nach Stuttgart.<br />
+            Vom privaten Raum in den institutionellen Kontext.<br />
+            Von einer Fotografie, mit der jemand leben musste – oder leben durfte – zu einem Werk, das nun von vielen Menschen betrachtet werden kann.
+          </p>
+          <p>Vielleicht ist genau das die schönste Form künstlerischer Anerkennung:</p>
+          <p>Dass ein Bild Jahrzehnte später noch immer etwas auslöst.</p>
+
+          <p class="muted" style="font-style: italic;">
+            Hinweis für die Veröffentlichung: Die persönliche Geschichte über die Kuratorin und das Gästezimmer sollte vor Veröffentlichung noch einmal von Andreas Fux bzw. der betreffenden Kuratorin bestätigt werden. Den konkreten Ausstellungstermin und das konkrete Werk im Landesmuseum Württemberg würde ich ebenfalls erst ergänzen, sobald dafür eine offizielle Museumsankündigung vorliegt.
+          </p>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ================= RADIOACTIVITY ARTIKEL ================= -->
+      <section class="section container" aria-label="RADIOACTIVITY — Berlin Fashion Week AW27">
+        <div class="section-head">
+          <p class="kicker">RADIOACTIVITY</p>
+          <h2>Berlin Fashion Week AW27</h2>
+          <p class="lead">Macht ist unsichtbar. Energie ist unsichtbar. Gefahr kann unsichtbar sein. Ihre Folgen sind es nicht.</p>
+        </div>
+
+        <div class="interview-copy">
+          <p>
+            Mit RADIOACTIVITY entwickelt Sven Appelt für die Berlin Fashion Week AW27 eine Modenschau über Macht, Energie, Narzissmus und die vielleicht verstörendste menschliche Eigenschaft: die Fähigkeit, aus Katastrophen zu lernen – und das Gelernte trotzdem wieder zu verdrängen.
+          </p>
+          <p>
+            Die Inszenierung blickt dafür bewusst zurück. Auf Ereignisse, die historisch, politisch und gesellschaftlich vollkommen unterschiedlich sind und ausdrücklich nicht miteinander gleichgesetzt werden sollen. Hiroshima steht für die zerstörerische Dimension nuklearer Kriegsführung. Fukushima für die Risiken einer Technologie, deren Energiegewinnung und mögliche Folgen unmittelbar miteinander verbunden sind. Die AIDS-Pandemie, insbesondere das New York der 1980er-Jahre, erzählt wiederum von einem Virus, von Krankheit und Tod, aber ebenso von gesellschaftlicher Stigmatisierung, politischem Versagen und einer Community, die um Sichtbarkeit und Überleben kämpfen musste.
+          </p>
+          <p>Drei unterschiedliche Geschichten. Drei unterschiedliche Ursachen. Drei unterschiedliche Formen von Gefahr.</p>
+          <p>Was sie für RADIOACTIVITY verbindet, ist das Unsichtbare.</p>
+          <p>
+            Radioaktivität lässt sich nicht sehen. Ein Virus lässt sich mit bloßem Auge nicht erkennen. Macht wiederum besitzt häufig keine physische Gestalt – und kann dennoch darüber entscheiden, welche Risiken eine Gesellschaft akzeptiert, wessen Warnungen gehört werden und welche Konsequenzen Menschen bereit sind, anderen zuzumuten.
+          </p>
+          <p>Genau an diesem Punkt beginnt Appelts Auseinandersetzung.</p>
+
+          <h3>Der Mensch im Zentrum</h3>
+          <p>RADIOACTIVITY erzählt deshalb nicht in erster Linie von Kernenergie oder Krankheit. Die Show erzählt vom Menschen und seinem Verhältnis zur Macht.</p>
+          <p>
+            Von der Vorstellung, Natur kontrollieren zu können. Von technologischem Fortschritt und seinem Versprechen grenzenloser Möglichkeiten. Von politischen Entscheidungen. Von Ego, Selbstüberschätzung und dem menschlichen Bedürfnis, stärker, schneller und mächtiger sein zu wollen als die Generation zuvor.
+          </p>
+          <p>Narzissmus wird dabei nicht als klinische Diagnose verwendet, sondern als künstlerisches Motiv: Selbstüberschätzung, Kontrollillusion und die Überzeugung von der eigenen Unverletzlichkeit.</p>
+          <p>Wir wissen um Risiken – und gehen sie trotzdem ein.</p>
+          <p>Wir kennen historische Konsequenzen – und glauben trotzdem, dass es diesmal anders sein wird.</p>
+          <p>Wir erinnern uns an Katastrophen – und beginnen irgendwann, ihre Warnungen zu vergessen.</p>
+          <p>
+            RADIOACTIVITY stellt deshalb eine unangenehme Frage: Wie viel Fortschritt entsteht aus Erkenntnis – und wie viel aus dem Wunsch des Menschen, seine eigene Macht immer weiter auszudehnen?
+          </p>
+
+          <h3>Hiroshima. Fukushima. New York.</h3>
+          <p>Die historischen Bezugspunkte der Show funktionieren nicht als dekorative Kulisse. Sie markieren Momente, in denen unsichtbare Kräfte plötzlich sichtbare Konsequenzen entwickelten.</p>
+          <p>Hiroshima steht dabei für einen historischen Wendepunkt, an dem der Mensch demonstrierte, welche zerstörerische Energie er technisch freisetzen kann.</p>
+          <p>Fukushima konfrontiert uns Jahrzehnte später mit einer anderen Realität nuklearer Energie: einer hochentwickelten Gesellschaft und einer Technologie, deren Beherrschbarkeit angesichts einer Katastrophe an Grenzen stößt.</p>
+          <p>
+            Das New York der AIDS-Krise wiederum verschiebt die Perspektive vom Atom zum Körper. Die unsichtbare Gefahr ist hier biologisch. Doch zu ihr kommen andere Kräfte: Angst, Ausgrenzung, Schweigen, gesellschaftliche Vorurteile und politische Entscheidungen.
+          </p>
+          <p>Gerade diese Unterschiede sind wichtig.</p>
+          <p>
+            RADIOACTIVITY behauptet nicht, diese Ereignisse seien vergleichbar. Die Show untersucht vielmehr, was geschieht, wenn etwas, das wir nicht sehen können, plötzlich unsere Vorstellung von Sicherheit, Kontrolle und gesellschaftlicher Ordnung zerstört.
+          </p>
+
+          <h3>Wenn das Unsichtbare Kleidung wird</h3>
+          <p>Und genau hier beginnt Fashion.</p>
+          <p>Wie übersetzt man Strahlung in eine Silhouette?</p>
+          <p>Wie wird Energie zu Material?</p>
+          <p>Wie sieht Gefahr aus, bevor wir ihre Konsequenzen erkennen?</p>
+          <p>Wie übersetzt man Angst, Macht, Verletzlichkeit und Kontrollverlust in einen Körper, der sich über einen Runway bewegt?</p>
+          <p>
+            RADIOACTIVITY versteht Kleidung deshalb nicht ausschließlich als Produkt. Materialien, Oberflächen, Konstruktionen und Körper werden zu Trägern einer Erzählung.
+          </p>
+          <p>Mode bekommt eine Aufgabe, die über Schönheit hinausgeht.</p>
+          <p>
+            Sie kann irritieren.<br />
+            Sie kann erinnern.<br />
+            Sie kann Fragen stellen.<br />
+            Und sie kann etwas sichtbar machen, das eigentlich keine sichtbare Form besitzt.
+          </p>
+          <p>
+            Die Kollektion wird damit Teil einer multidisziplinären Inszenierung zwischen Fashion, Kunst, Musik, Performance und kultureller Erinnerung.
+          </p>
+
+          <h3>Vergangenheit ist Gegenwart</h3>
+          <p>RADIOACTIVITY schaut zurück, um über heute zu sprechen.</p>
+          <p>
+            Denn die Fragen hinter diesen historischen Ereignissen sind nicht verschwunden. Energiepolitik, nukleare Bedrohung, technologische Macht, globale Pandemien und gesellschaftlicher Umgang mit Krisen gehören weiterhin zur Gegenwart.
+          </p>
+          <p>Die Technologien verändern sich. Die politischen Systeme verändern sich. Generationen wechseln.</p>
+          <p>Doch eine Frage bleibt:</p>
+          <p>
+            Hat der Mensch tatsächlich gelernt – oder hat er lediglich neue Möglichkeiten entwickelt, dieselben Fehler auf einem anderen Niveau zu wiederholen?
+          </p>
+          <p>RADIOACTIVITY liefert darauf bewusst keine einfache Antwort.</p>
+          <p>
+            Die Show macht aus vergangenen Ereignissen keine Nostalgie und aus Katastrophen keine Ästhetik. Sie benutzt Fashion als Medium, um Erinnerung mit Gegenwart zu konfrontieren.
+          </p>
+          <p>Macht. Energie. Narzissmus. Gefahr.</p>
+          <p>Vier Begriffe, die sich durch unterschiedliche Generationen ziehen.</p>
+          <p>
+            Und eine Modenschau über das, was wir nicht sehen können –<br />
+            bis es unmöglich wird, noch wegzusehen.
+          </p>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ================= AKTUELLE HIGHLIGHTS ================= -->
+      <section class="section container" id="aktuelle-highlights" aria-label="Aktuelle Highlights">
+        <div class="section-head">
+          <h2>Aktuelle Highlights</h2>
+          <p class="muted">
+            Voices of Creation bringt Menschen, Disziplinen und Ideen zusammen. Unsere aktuellen Projekte bewegen sich zwischen Kunst, Mode, kultureller Erinnerung und gesellschaftlichem Diskurs — von musealen Positionen über neue Formen der Modedemonstration bis zur nächsten großen Inszenierung während der Berlin Fashion Week.
+          </p>
+        </div>
+
+        <div class="interview-copy">
+          <h3>WILD ROSE</h3>
+          <p class="lead">Kreativität ist #unkürzbar</p>
+          <p>
+            Mit WILD ROSE entwickelt Voices of Creation e.V. eine künstlerische Modedemonstration im Rahmen der Silvesterveranstaltung rund um die Siegessäule in Berlin.
+          </p>
+          <p>
+            Gemeinsam mit Freund:innen des Vereins, Kreativen und Studierenden aus Berlin entsteht eine Kollektion, die von der ersten Idee bis zur Präsentation gemeinschaftlich entwickelt und produziert wird.
+          </p>
+          <p>
+            Im Mittelpunkt steht #unkürzbar: ein öffentliches Statement gegen fehlende finanzielle Mittel und Kürzungen in Kultur, Kunst und Bildung. Mode wird dabei zur Sprache einer Demonstration — sichtbar, unmittelbar und mitten in der Stadt.
+          </p>
+          <p>Denn eine Gesellschaft kann über vieles diskutieren. An Bildung, Kunst und kultureller Zukunft darf sie nicht sparen.</p>
+          <p><strong>WILD ROSE — How Creativity Blooms After the Cuts.</strong></p>
+
+          <hr class="section-divider" />
+
+          <h3>ANDREAS FUX</h3>
+          <p class="lead">Vom Underground ins Museum</p>
+          <p>
+            Die Arbeiten unseres Gründungsmitglieds Andreas Fux führen zurück in eine Zeit, in der queere Identität und künstlerische Freiheit in der DDR unter völlig anderen gesellschaftlichen und politischen Bedingungen existierten.
+          </p>
+          <p>Nun wird eine Fotografie von Andreas Fux im Landesmuseum Württemberg in Stuttgart zu sehen sein.</p>
+          <p>
+            Für Voices of Creation steht diese Präsentation exemplarisch für eine Aufgabe, die weit über Ausstellung hinausgeht: künstlerische Positionen sichtbar zu halten, Biografien zu bewahren und Vergangenheit aus der Perspektive der Gegenwart neu zu betrachten.
+          </p>
+          <p>Was einst am Rand einer Gesellschaft entstand, wird Teil ihrer kulturellen Erinnerung.</p>
+
+          <hr class="section-divider" />
+
+          <h3>RADIOACTIVITY</h3>
+          <p class="lead">Berlin Fashion Week · Februar 2027</p>
+          <p>Drei Ereignisse. Drei vollkommen unterschiedliche Zusammenhänge. Eine Show.</p>
+          <p>Hiroshima. Fukushima. Die AIDS-Pandemie im New York der 1980er-Jahre.</p>
+          <p>
+            Mit RADIOACTIVITY entwickelt Sven Appelt eine neue Fashion-Inszenierung für die Berlin Fashion Week im Februar 2027. Ausgangspunkt sind Ereignisse, deren Ursachen und historische Dimensionen nicht gleichgesetzt werden — die jedoch eine abstrakte Gemeinsamkeit besitzen: die Erfahrung einer Bedrohung, deren Wirkung sich dem unmittelbaren Blick entziehen kann.
+          </p>
+          <p>
+            Radioaktivität ist unsichtbar. Ein Virus ist unsichtbar. Gesellschaftliche Kräfte, Angst und Stigmatisierung besitzen keine sichtbare Gestalt — und können dennoch Körper, Biografien und ganze Generationen verändern.
+          </p>
+          <p>Wie übersetzt man etwas Unsichtbares in Kleidung?</p>
+          <p>
+            Wie werden Strahlung, Verletzlichkeit, Angst, Verlust und Erinnerung zu Material, Silhouette und Bewegung? Und wie verbindet Appelt drei bewusst unterschiedliche historische Erfahrungen, ohne ihre Unterschiede aufzulösen?
+          </p>
+          <p>RADIOACTIVITY sucht die Antwort nicht in einer historischen Nacherzählung. Die Show übersetzt Erinnerung in Fashion und stellt eine andere Frage:</p>
+          <p><strong>Wie gibt man dem Unsichtbaren eine Form?</strong></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid" aria-label="Footer navigation">
+        <div class="footer-brand">
+          <div class="footer-brand__top">
+            <strong>Voices of Creation e.V.</strong>
+            <span class="muted" data-i18n="footer.tagline">Art • Culture • Creation</span>
+          </div>
+
+          <div class="social">
+            <a href="https://instagram.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer" aria-label="Instagram (placeholder)">IG</a>
+            <a href="https://tiktok.com/@PLACEHOLDER" target="_blank" rel="noopener noreferrer" aria-label="TikTok (placeholder)">TT</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1">Ausstellungen</h4>
+          <a href="ausstellungen.html" data-i18n="footer.exhibitions">Ausstellungen</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2">Highlights</h4>
+          <a href="index.html#shows" data-i18n="footer.showsHighlights">Highlights</a>
+          <a href="index.html#shows" data-i18n="footer.showsSchedule">Zeitplan</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col3">Designprojekte</h4>
+          <a href="sponsoring.html" data-i18n="footer.partners">Partner</a>
+          <a href="sponsoring.html" data-i18n="footer.funding">Förderung</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col4">Shop</h4>
+          <a href="index.html#shop" data-i18n="footer.featured">Empfohlene Produkte</a>
+          <a href="index.html#shop" data-i18n="footer.catalog">Ausstellungskataloge</a>
+          <a href="index.html#shop" data-i18n="footer.editions">Editionen</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col5">Kontakt</h4>
+          <a href="index.html#kontakt" data-i18n="footer.contact">Kontakt</a>
+          <a href="mailto:info@vofc.art" data-i18n="footer.email">E-Mail</a>
+        </div>
+      </div>
+
+      <div class="container subfooter" aria-label="Legal">
+        <div class="subfooter__left">
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+          <a href="#" data-i18n="legal.cookies">Cookie-Einstellungen</a>
+        </div>
+
+        <div class="subfooter__right">
+          <span class="muted" data-i18n="legal.copy">
+            © <span id="year"></span> Voices of Creation e.V. — Alle Rechte vorbehalten.
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="drawer" aria-hidden="true">
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <div class="drawer__top">
+          <strong>Menu</strong>
+          <button class="drawer__close" type="button" aria-label="Close menu">✕</button>
+        </div>
+        <nav class="drawer__nav" aria-label="Mobile">
+          <a class="nav-link nav-link--comingsoon" href="ausstellungen.html" data-comingsoon="Coming soon" data-i18n="nav.exhibitions">Ausstellungen</a>
+          <a href="index.html#shows" data-i18n="nav.shows">Highlights</a>
+          <a href="sponsoring.html" data-i18n="nav.sponsoring">Designprojekte</a>
+          <a href="index.html#shop" data-i18n="nav.shop">Shop</a>
+          <a href="index.html#kontakt" data-i18n="nav.contact">Kontakt</a>
+          <a href="login.html">Login</a>
+          <hr />
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+        </nav>
+      </div>
+      <div class="drawer__backdrop" tabindex="-1"></div>
+    </div>
+
+    <script>
+      const I18N = {
+        de: {
+          "nav.exhibitions": "Ausstellungen",
+          "nav.shows": "Highlights",
+          "nav.sponsoring": "Designprojekte",
+          "nav.shop": "Shop",
+          "nav.contact": "Kontakt",
+          "mid.comingSoon": "Coming soon",
+          "footer.tagline": "Art • Culture • Creation",
+          "footer.col1": "Ausstellungen",
+          "footer.exhibitions": "Ausstellungen",
+          "footer.col2": "Highlights",
+          "footer.showsHighlights": "Highlights",
+          "footer.showsSchedule": "Zeitplan",
+          "footer.col3": "Designprojekte",
+          "footer.partners": "Partner",
+          "footer.funding": "Förderung",
+          "footer.col4": "Shop",
+          "footer.featured": "Empfohlene Produkte",
+          "footer.catalog": "Ausstellungskataloge",
+          "footer.editions": "Editionen",
+          "footer.col5": "Kontakt",
+          "footer.contact": "Kontakt",
+          "footer.email": "E-Mail",
+          "legal.imprint": "Impressum",
+          "legal.privacy": "Datenschutz",
+          "legal.cookies": "Cookie-Einstellungen",
+          "legal.copy": "© {{year}} Voices of Creation e.V. — Alle Rechte vorbehalten.",
+        },
+        en: {
+          "nav.exhibitions": "Exhibitions",
+          "nav.shows": "Highlights",
+          "nav.sponsoring": "Design Projects",
+          "nav.shop": "Shop",
+          "nav.contact": "Contact",
+          "mid.comingSoon": "Coming soon",
+          "footer.tagline": "Art • Culture • Creation",
+          "footer.col1": "Exhibitions",
+          "footer.exhibitions": "Exhibitions",
+          "footer.col2": "Highlights",
+          "footer.showsHighlights": "Highlights",
+          "footer.showsSchedule": "Schedule",
+          "footer.col3": "Design Projects",
+          "footer.partners": "Partners",
+          "footer.funding": "Funding",
+          "footer.col4": "Shop",
+          "footer.featured": "Featured products",
+          "footer.catalog": "Exhibition catalogs",
+          "footer.editions": "Editions",
+          "footer.col5": "Contact",
+          "footer.contact": "Contact",
+          "footer.email": "Email",
+          "legal.imprint": "Imprint",
+          "legal.privacy": "Privacy",
+          "legal.cookies": "Cookie settings",
+          "legal.copy": "© {{year}} Voices of Creation e.V. — All rights reserved.",
+        },
+      };
+
+      function setLangButtons(lang) {
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang") === lang));
+        });
+      }
+
+      function applyI18n(lang) {
+        const dict = I18N[lang] || I18N.de;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          let value = dict[key];
+          if (!value) return;
+          if (key === "legal.copy") value = value.replace("{{year}}", String(new Date().getFullYear()));
+          el.textContent = value;
+        });
+        document.querySelectorAll("[data-comingsoon]").forEach((el) => {
+          el.setAttribute("data-comingsoon", dict["mid.comingSoon"] || "Coming soon");
+        });
+      }
+
+      function updateUrlLang(lang) {
+        const url = new URL(location.href);
+        url.searchParams.set("lang", lang);
+        history.replaceState({}, "", url.toString());
+      }
+
+      function initMenu() {
+        const burger = document.querySelector(".burger");
+        const drawer = document.querySelector(".drawer");
+        const backdrop = document.querySelector(".drawer__backdrop");
+        const closeBtn = document.querySelector(".drawer__close");
+
+        function open() {
+          drawer.classList.add("is-open");
+          drawer.setAttribute("aria-hidden", "false");
+          burger.setAttribute("aria-expanded", "true");
+          document.body.classList.add("no-scroll");
+        }
+        function close() {
+          drawer.classList.remove("is-open");
+          drawer.setAttribute("aria-hidden", "true");
+          burger.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("no-scroll");
+        }
+
+        burger.addEventListener("click", () => (drawer.classList.contains("is-open") ? close() : open()));
+        backdrop.addEventListener("click", close);
+        closeBtn.addEventListener("click", close);
+        drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
+        document.addEventListener("keydown", (e) => e.key === "Escape" && close());
+      }
+
+      function initLangSwitcher() {
+        document.querySelectorAll(".lang__btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang");
+            localStorage.setItem("vofc_lang", lang);
+            document.documentElement.lang = lang;
+            setLangButtons(lang);
+            applyI18n(lang);
+            updateUrlLang(lang);
+          });
+        });
+      }
+
+      (function init() {
+        const lang = window.__VOFC_LANG__ || "de";
+        setLangButtons(lang);
+        applyI18n(lang);
+        updateUrlLang(lang);
+        const y = document.getElementById("year");
+        if (y) y.textContent = String(new Date().getFullYear());
+        initLangSwitcher();
+        initMenu();
+      })();
+    </script>
+  </body>
+</html>
