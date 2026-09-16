@@ -1096,3 +1096,28 @@ p {
 p + p {
   margin-top: 0;
 }
+
+/* Bildspalte auf Unterseiten: nicht mehr mit dem Text mitstrecken */
+.page-hero__grid{
+  align-items: start; /* statt stretch */
+}
+
+.hero-mini{
+  aspect-ratio: 3 / 4;
+  max-height: 80vh;
+  position: sticky;
+  top: 24px;
+}
+
+@media (min-width: 860px){
+  .hero-mini{
+    top: 90px; /* Abstand zum Header, falls der fixiert/sticky ist */
+  }
+}
+
+@media (max-width: 859px){
+  .hero-mini{
+    position: static;
+    max-height: 60vh;
+  }
+}
