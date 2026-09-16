@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>Aktuelle Highlights — Voices of Creation e.V.</title>
+    <meta
+      name="description"
+      content="Aktuelle Highlights — WILD ROSE, Andreas Fux in Stuttgart und RADIOACTIVITY bei der Berlin Fashion Week."
+    />
+
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(location.search);
+        const fromQuery = params.get("lang");
+        const fromStorage = localStorage.getItem("vofc_lang");
+        const lang = (fromQuery || fromStorage || "de").toLowerCase();
+        if (lang !== "de" && lang !== "en") return;
+        localStorage.setItem("vofc_lang", lang);
+        document.documentElement.lang = lang;
+        window.__VOFC_LANG__ = lang;
+      })();
+    </script>
+
+    <style>
+      /* page-specific only */
+      .page-hero { padding: 34px 0 50px 0; }
+      .page-hero__grid { display:grid; grid-template-columns: 1fr; gap:18px; }
+      .panel {
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(0,0,0,.12);
+        background: rgba(255,255,255,.65);
+        box-shadow: 0 12px 36px rgba(0,0,0,.08);
+        padding: 18px;
+      }
+      .badge {
+        display:inline-flex;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(255,255,255,.75);
+        font-size: 12px;
+      }
+      .panel h1 { margin-top: 12px; font-size: clamp(34px,4.4vw,52px); line-height:1.05; }
+      .panel h2 { margin-top: 14px; font-size: 22px; }
+      .panel h3 { margin-top: 32px; font-size: 26px; }
+      .panel p { margin-top: 10px; color: var(--muted); max-width: 70ch; }
+      .panel .lead { color: var(--ink); }
+      .rule { height:1px; background: var(--line); margin: 26px 0; border:0; }
+      .back-row { margin-top: 16px; display:flex; gap:12px; flex-wrap:wrap; }
+      .hero-mini {
+        border-radius: var(--radius-lg);
+        overflow:hidden;
+        border: 1px solid rgba(0,0,0,.10);
+        box-shadow: var(--shadow);
+      }
+      .hero-mini img { width:100%; height:100%; object-fit:cover; display:block; }
+      @media (min-width: 860px){
+        .page-hero__grid { grid-template-columns: .95fr 1.05fr; align-items: stretch; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="simple-header">
+      <div class="container simple-header__row">
+        <a class="brand brand--small" href="./" aria-label="Home">
+          <img src="assets/logo.png" alt="Voices of Creation Logo" width="180" height="58" />
+        </a>
+
+        <nav class="simple-nav" aria-label="Quick">
+          <a href="./" data-i18n="nav.home">Home</a>
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-hero">
+      <div class="page-hero__grid">
+        <section class="panel" aria-label="Highlights detail">
+          <span class="badge" data-i18n="hl.badge">Highlights</span>
+
+          <h1 data-i18n="hl.title">Aktuelle Highlights</h1>
+          <p class="lead" data-i18n="hl.intro">
+            Voices of Creation bringt Menschen, Disziplinen und Ideen zusammen. Unsere aktuellen Projekte bewegen
+            sich zwischen Kunst, Mode, kultureller Erinnerung und gesellschaftlichem Diskurs — von musealen
+            Positionen über neue Formen der Modedemonstration bis zur nächsten großen Inszenierung während der
+            Berlin Fashion Week.
+          </p>
+
+          <hr class="rule" />
+
+          <h3 data-i18n="hl.wr.title">WILD ROSE</h3>
+          <p class="lead" data-i18n="hl.wr.subtitle">Kreativität ist #unkürzbar</p>
+
+          <p data-i18n="hl.wr.p1">
+            Mit WILD ROSE entwickelt Voices of Creation e.V. eine künstlerische Modedemonstration im Rahmen der
+            Silvesterveranstaltung rund um die Siegessäule in Berlin.
+          </p>
+          <p data-i18n="hl.wr.p2">
+            Gemeinsam mit Freund:innen des Vereins, Kreativen und Studierenden aus Berlin entsteht eine Kollektion,
+            die von der ersten Idee bis zur Präsentation gemeinschaftlich entwickelt und produziert wird.
+          </p>
+          <p data-i18n="hl.wr.p3">
+            Im Mittelpunkt steht #unkürzbar: ein öffentliches Statement gegen fehlende finanzielle Mittel und
+            Kürzungen in Kultur, Kunst und Bildung. Mode wird dabei zur Sprache einer Demonstration — sichtbar,
+            unmittelbar und mitten in der Stadt.
+          </p>
+          <p data-i18n="hl.wr.p4">
+            Denn eine Gesellschaft kann über vieles diskutieren. An Bildung, Kunst und kultureller Zukunft darf sie
+            nicht sparen.
+          </p>
+          <p data-i18n="hl.wr.p5">
+            <strong>WILD ROSE — How Creativity Blooms After the Cuts.</strong>
+          </p>
+
+          <hr class="rule" />
+
+          <h3 data-i18n="hl.af.title">ANDREAS FUX</h3>
+          <p class="lead" data-i18n="hl.af.subtitle">Vom Underground ins Museum</p>
+
+          <p data-i18n="hl.af.p1">
+            Die Arbeiten unseres Gründungsmitglieds Andreas Fux führen zurück in eine Zeit, in der queere Identität
+            und künstlerische Freiheit in der DDR unter völlig anderen gesellschaftlichen und politischen
+            Bedingungen existierten.
+          </p>
+          <p data-i18n="hl.af.p2">
+            Nun wird eine Fotografie von Andreas Fux im Landesmuseum Württemberg in Stuttgart zu sehen sein.
+          </p>
+          <p data-i18n="hl.af.p3">
+            Für Voices of Creation steht diese Präsentation exemplarisch für eine Aufgabe, die weit über
+            Ausstellung hinausgeht: künstlerische Positionen sichtbar zu halten, Biografien zu bewahren und
+            Vergangenheit aus der Perspektive der Gegenwart neu zu betrachten.
+          </p>
+          <p data-i18n="hl.af.p4">
+            Was einst am Rand einer Gesellschaft entstand, wird Teil ihrer kulturellen Erinnerung.
+          </p>
+
+          <hr class="rule" />
+
+          <h3 data-i18n="hl.ra.title">RADIOACTIVITY</h3>
+          <p class="lead" data-i18n="hl.ra.subtitle">Berlin Fashion Week · Februar 2027</p>
+
+          <p data-i18n="hl.ra.p1">
+            Drei Ereignisse. Drei vollkommen unterschiedliche Zusammenhänge. Eine Show.
+          </p>
+          <p data-i18n="hl.ra.p2">
+            Hiroshima. Fukushima. Die AIDS-Pandemie im New York der 1980er-Jahre.
+          </p>
+          <p data-i18n="hl.ra.p3">
+            Mit RADIOACTIVITY entwickelt Sven Appelt eine neue Fashion-Inszenierung für die Berlin Fashion Week im
+            Februar 2027. Ausgangspunkt sind Ereignisse, deren Ursachen und historische Dimensionen nicht
+            gleichgesetzt werden — die jedoch eine abstrakte Gemeinsamkeit besitzen: die Erfahrung einer Bedrohung,
+            deren Wirkung sich dem unmittelbaren Blick entziehen kann.
+          </p>
+          <p data-i18n="hl.ra.p4">
+            Radioaktivität ist unsichtbar. Ein Virus ist unsichtbar. Gesellschaftliche Kräfte, Angst und
+            Stigmatisierung besitzen keine sichtbare Gestalt — und können dennoch Körper, Biografien und ganze
+            Generationen verändern.
+          </p>
+          <p data-i18n="hl.ra.p5">
+            Wie übersetzt man etwas Unsichtbares in Kleidung?
+          </p>
+          <p data-i18n="hl.ra.p6">
+            Wie werden Strahlung, Verletzlichkeit, Angst, Verlust und Erinnerung zu Material, Silhouette und
+            Bewegung? Und wie verbindet Appelt drei bewusst unterschiedliche historische Erfahrungen, ohne ihre
+            Unterschiede aufzulösen?
+          </p>
+          <p data-i18n="hl.ra.p7">
+            RADIOACTIVITY sucht die Antwort nicht in einer historischen Nacherzählung. Die Show übersetzt
+            Erinnerung in Fashion und stellt eine andere Frage:
+          </p>
+          <p data-i18n="hl.ra.p8">
+            <strong>Wie gibt man dem Unsichtbaren eine Form?</strong>
+          </p>
+
+          <div class="back-row">
+            <a class="btn btn--primary" href="./" data-i18n="hl.back">Zurück zur Startseite</a>
+            <a class="btn btn--ghost" href="mailto:info@vofc.art" data-i18n="hl.mail">Kontakt</a>
+          </div>
+        </section>
+
+        <div class="hero-mini" aria-hidden="true">
+          <img src="assets/card-collections.jpg" alt="" loading="eager" width="1400" height="900" />
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container subfooter" aria-label="Legal">
+        <div class="subfooter__left">
+          <a href="impressum.html" data-i18n="legal.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="legal.privacy">Datenschutz</a>
+        </div>
+        <div class="subfooter__right">
+          <span class="muted" data-i18n="legal.copy">© <span id="year"></span> Voices of Creation e.V.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const I18N = {
+        de: {
+          "nav.home": "Home",
+          "legal.imprint": "Impressum",
+          "legal.privacy": "Datenschutz",
+          "legal.copy": "© {{year}} Voices of Creation e.V.",
+
+          "hl.badge": "Highlights",
+          "hl.title": "Aktuelle Highlights",
+          "hl.intro": "Voices of Creation bringt Menschen, Disziplinen und Ideen zusammen. Unsere aktuellen Projekte bewegen sich zwischen Kunst, Mode, kultureller Erinnerung und gesellschaftlichem Diskurs — von musealen Positionen über neue Formen der Modedemonstration bis zur nächsten großen Inszenierung während der Berlin Fashion Week.",
+
+          "hl.wr.title": "WILD ROSE",
+          "hl.wr.subtitle": "Kreativität ist #unkürzbar",
+          "hl.wr.p1": "Mit WILD ROSE entwickelt Voices of Creation e.V. eine künstlerische Modedemonstration im Rahmen der Silvesterveranstaltung rund um die Siegessäule in Berlin.",
+          "hl.wr.p2": "Gemeinsam mit Freund:innen des Vereins, Kreativen und Studierenden aus Berlin entsteht eine Kollektion, die von der ersten Idee bis zur Präsentation gemeinschaftlich entwickelt und produziert wird.",
+          "hl.wr.p3": "Im Mittelpunkt steht #unkürzbar: ein öffentliches Statement gegen fehlende finanzielle Mittel und Kürzungen in Kultur, Kunst und Bildung. Mode wird dabei zur Sprache einer Demonstration — sichtbar, unmittelbar und mitten in der Stadt.",
+          "hl.wr.p4": "Denn eine Gesellschaft kann über vieles diskutieren. An Bildung, Kunst und kultureller Zukunft darf sie nicht sparen.",
+          "hl.wr.p5": "WILD ROSE — How Creativity Blooms After the Cuts.",
+
+          "hl.af.title": "ANDREAS FUX",
+          "hl.af.subtitle": "Vom Underground ins Museum",
+          "hl.af.p1": "Die Arbeiten unseres Gründungsmitglieds Andreas Fux führen zurück in eine Zeit, in der queere Identität und künstlerische Freiheit in der DDR unter völlig anderen gesellschaftlichen und politischen Bedingungen existierten.",
+          "hl.af.p2": "Nun wird eine Fotografie von Andreas Fux im Landesmuseum Württemberg in Stuttgart zu sehen sein.",
+          "hl.af.p3": "Für Voices of Creation steht diese Präsentation exemplarisch für eine Aufgabe, die weit über Ausstellung hinausgeht: künstlerische Positionen sichtbar zu halten, Biografien zu bewahren und Vergangenheit aus der Perspektive der Gegenwart neu zu betrachten.",
+          "hl.af.p4": "Was einst am Rand einer Gesellschaft entstand, wird Teil ihrer kulturellen Erinnerung.",
+
+          "hl.ra.title": "RADIOACTIVITY",
+          "hl.ra.subtitle": "Berlin Fashion Week · Februar 2027",
+          "hl.ra.p1": "Drei Ereignisse. Drei vollkommen unterschiedliche Zusammenhänge. Eine Show.",
+          "hl.ra.p2": "Hiroshima. Fukushima. Die AIDS-Pandemie im New York der 1980er-Jahre.",
+          "hl.ra.p3": "Mit RADIOACTIVITY entwickelt Sven Appelt eine neue Fashion-Inszenierung für die Berlin Fashion Week im Februar 2027. Ausgangspunkt sind Ereignisse, deren Ursachen und historische Dimensionen nicht gleichgesetzt werden — die jedoch eine abstrakte Gemeinsamkeit besitzen: die Erfahrung einer Bedrohung, deren Wirkung sich dem unmittelbaren Blick entziehen kann.",
+          "hl.ra.p4": "Radioaktivität ist unsichtbar. Ein Virus ist unsichtbar. Gesellschaftliche Kräfte, Angst und Stigmatisierung besitzen keine sichtbare Gestalt — und können dennoch Körper, Biografien und ganze Generationen verändern.",
+          "hl.ra.p5": "Wie übersetzt man etwas Unsichtbares in Kleidung?",
+          "hl.ra.p6": "Wie werden Strahlung, Verletzlichkeit, Angst, Verlust und Erinnerung zu Material, Silhouette und Bewegung? Und wie verbindet Appelt drei bewusst unterschiedliche historische Erfahrungen, ohne ihre Unterschiede aufzulösen?",
+          "hl.ra.p7": "RADIOACTIVITY sucht die Antwort nicht in einer historischen Nacherzählung. Die Show übersetzt Erinnerung in Fashion und stellt eine andere Frage:",
+          "hl.ra.p8": "Wie gibt man dem Unsichtbaren eine Form?",
+
+          "hl.back": "Zurück zur Startseite",
+          "hl.mail": "Kontakt",
+        },
+        en: {
+          "nav.home": "Home",
+          "legal.imprint": "Imprint",
+          "legal.privacy": "Privacy",
+          "legal.copy": "© {{year}} Voices of Creation e.V.",
+
+          "hl.badge": "Highlights",
+          "hl.title": "Current Highlights",
+          "hl.intro": "Voices of Creation brings together people, disciplines and ideas. Our current projects move between art, fashion, cultural memory and public discourse — from museum positions to new forms of fashion protest to the next major staging during Berlin Fashion Week.",
+
+          "hl.wr.title": "WILD ROSE",
+          "hl.wr.subtitle": "Creativity is #unkürzbar (un-cuttable)",
+          "hl.wr.p1": "With WILD ROSE, Voices of Creation e.V. is developing an artistic fashion demonstration as part of the New Year's Eve event around the Siegessäule in Berlin.",
+          "hl.wr.p2": "Together with friends of the association, creatives and students from Berlin, a collection is created that is developed and produced collectively from the first idea to the presentation.",
+          "hl.wr.p3": "At its center is #unkürzbar: a public statement against missing funding and cuts to culture, art and education. Fashion becomes the language of a demonstration — visible, immediate and in the middle of the city.",
+          "hl.wr.p4": "Because a society can debate many things. It must not cut back on education, art and cultural future.",
+          "hl.wr.p5": "WILD ROSE — How Creativity Blooms After the Cuts.",
+
+          "hl.af.title": "ANDREAS FUX",
+          "hl.af.subtitle": "From the underground into the museum",
+          "hl.af.p1": "The works of our founding member Andreas Fux lead back to a time when queer identity and artistic freedom existed in the GDR under entirely different social and political conditions.",
+          "hl.af.p2": "A photograph by Andreas Fux will now be shown at the Landesmuseum Württemberg in Stuttgart.",
+          "hl.af.p3": "For Voices of Creation, this presentation exemplifies a task that goes far beyond exhibiting: keeping artistic positions visible, preserving biographies, and reconsidering the past from the perspective of the present.",
+          "hl.af.p4": "What once emerged at the margins of society becomes part of its cultural memory.",
+
+          "hl.ra.title": "RADIOACTIVITY",
+          "hl.ra.subtitle": "Berlin Fashion Week · February 2027",
+          "hl.ra.p1": "Three events. Three completely different contexts. One show.",
+          "hl.ra.p2": "Hiroshima. Fukushima. The AIDS pandemic in 1980s New York.",
+          "hl.ra.p3": "With RADIOACTIVITY, Sven Appelt develops a new fashion staging for Berlin Fashion Week in February 2027. The starting point is events whose causes and historical dimensions are not equated — yet share an abstract commonality: the experience of a threat whose effects can elude immediate perception.",
+          "hl.ra.p4": "Radioactivity is invisible. A virus is invisible. Social forces, fear and stigmatization have no visible form — and yet can change bodies, biographies and entire generations.",
+          "hl.ra.p5": "How do you translate something invisible into clothing?",
+          "hl.ra.p6": "How do radiation, vulnerability, fear, loss and memory become material, silhouette and movement? And how does Appelt connect three deliberately different historical experiences without dissolving their differences?",
+          "hl.ra.p7": "RADIOACTIVITY does not seek the answer in a historical retelling. The show translates memory into fashion and poses a different question:",
+          "hl.ra.p8": "How do you give the invisible a form?",
+
+          "hl.back": "Back to homepage",
+          "hl.mail": "Contact",
+        },
+      };
+
+      function applyI18n(lang) {
+        const dict = I18N[lang] || I18N.de;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          let v = dict[key];
+          if (!v) return;
+          if (key === "legal.copy") v = v.replace("{{year}}", String(new Date().getFullYear()));
+          el.textContent = v;
+        });
+      }
+
+      (function init() {
+        const y = document.getElementById("year");
+        if (y) y.textContent = String(new Date().getFullYear());
+        const lang = window.__VOFC_LANG__ || "de";
+        applyI18n(lang);
+      })();
+    </script>
+  </body>
+</html>
